@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intervenções Escolares - Propostas para Saúde Mental Digital | Sesiverso</title>
+    <meta name="description" content="Propostas práticas de intervenções escolares para promover uso consciente de redes sociais e melhorar a saúde mental dos jovens.">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Intervenções Escolares - Propostas para Saúde Mental Digital">
+    <meta property="og:description" content="Propostas práticas de intervenções escolares para promover uso consciente de redes sociais e melhorar a saúde mental dos jovens.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="assets/images/og-image.jpg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Emergency Help Button (Fixed) -->
+    <div id="emergency-help" class="emergency-help" role="region" aria-label="Ajuda de emergência">
+        <button id="emergency-btn" class="emergency-btn" aria-label="Preciso de ajuda agora - CVV 188">
+            <i class="fas fa-heart" aria-hidden="true"></i>
+            <span>Preciso de ajuda agora</span>
+        </button>
+        
+        <div id="emergency-modal" class="emergency-modal" role="dialog" aria-modal="true" aria-labelledby="emergency-title" style="display: none;">
+            <div class="emergency-content">
+                <h3 id="emergency-title">Se você está em risco ou em crise</h3>
+                <p>Se estiver em risco imediato, ligue já para o CVV — 188 (atendimento 24h, gratuito e anônimo) ou acesse o chat.</p>
+                <div class="emergency-actions">
+                    <a href="tel:188" class="btn btn-emergency" aria-label="Ligar para CVV - 188">
+                        <i class="fas fa-phone" aria-hidden="true"></i>
+                        Ligar para 188
+                    </a>
+                    <a href="https://cvv.org.br/" target="_blank" rel="noopener noreferrer" class="btn btn-emergency-secondary" aria-label="Ir para o chat do CVV - abre em nova aba">
+                        <i class="fas fa-comments" aria-hidden="true"></i>
+                        Chat do CVV
+                    </a>
+                </div>
+                <button id="close-emergency" class="close-btn" aria-label="Fechar janela de ajuda">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="nav" role="navigation" aria-label="Menu principal">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <h1>Sesiverso</h1>
+                    <span class="nav-subtitle">Feira de Ciências</span>
+                </div>
+                
+                <button class="nav-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
+                
+                <ul class="nav-menu" role="menubar">
+                    <li role="none"><a href="index.html" class="nav-link" role="menuitem">Início</a></li>
+                    <li role="none"><a href="artigo.html" class="nav-link" role="menuitem">Artigo</a></li>
+                    <li role="none"><a href="video.html" class="nav-link" role="menuitem">Vídeo</a></li>
+                    <li role="none"><a href="filmes.html" class="nav-link" role="menuitem">Filmes</a></li>
+                    <li role="none"><a href="reportagens.html" class="nav-link" role="menuitem">Reportagens</a></li>
+                    <li role="none"><a href="intervencoes.html" class="nav-link active" role="menuitem" aria-current="page">Intervenções</a></li>
+                    <li role="none"><a href="como-ajudar.html" class="nav-link" role="menuitem">Como Ajudar</a></li>
+                                        <li role="none"><a href="contato.html" class="nav-link" role="menuitem">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header" role="banner">
+        <div class="container">
+            <h1 class="page-title">Intervenções Escolares</h1>
+            <p class="page-description">Propostas práticas para implementar na escola e comunidade, promovendo saúde mental e uso consciente de tecnologia</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content" role="main">
+        <div class="container">
+            
+            <!-- Overview -->
+            
+            <!-- Interventions Grid -->
+            <section class="interventions-section" aria-labelledby="interventions-title">
+                <h2 id="interventions-title" class="section-title">Propostas de Intervenção</h2>
+                
+                <div class="interventions-grid">
+                    <article class="intervention-card">
+                        <div class="intervention-header">
+                            <div class="intervention-icon">
+                                <i class="fas fa-chalkboard-teacher" aria-hidden="true"></i>
+                            </div>
+                            <div class="intervention-meta">
+                                <h3>Oficinas de Letramento Digital</h3>
+                                <div class="intervention-tags">
+                                    <span class="tag">8 semanas</span>
+                                    <span class="tag">Turmas de 15-30</span>
+                                    <span class="tag">Semanal</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="intervention-content">
+                            <h4>Objetivo</h4>
+                            <p>Desenvolver pensamento crítico sobre conteúdo digital e ensinar técnicas de verificação de informações, identificação de manipulação e uso consciente de redes sociais.</p>
+                            
+                            <h4>Metodologia</h4>
+                            <ul>
+                                <li>Análise crítica de posts de influenciadores</li>
+                                <li>Workshops sobre algoritmos e bolhas digitais</li>
+                                <li>Criação de conteúdo responsável</li>
+                                <li>Discussões em grupos pequenos</li>
+                            </ul>
+                            
+                            <h4>Recursos Necessários</h4>
+                            <ul>
+                                <li>Sala de informática ou dispositivos móveis</li>
+                                <li>Material impresso (handouts)</li>
+                                <li>Educador capacitado</li>
+                                <li>Tempo: 2h semanais por 8 semanas</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="intervention-card">
+                        <div class="intervention-header">
+                            <div class="intervention-icon">
+                                <i class="fas fa-users" aria-hidden="true"></i>
+                            </div>
+                            <div class="intervention-meta">
+                                <h3>Programa de Peer Support</h3>
+                                <div class="intervention-tags">
+                                    <span class="tag">Contínuo</span>
+                                    <span class="tag">Voluntário</span>
+                                    <span class="tag">Mentoria</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="intervention-content">
+                            <h4>Objetivo</h4>
+                            <p>Criar uma rede de apoio entre pares onde estudantes mais velhos orientam os mais novos sobre uso saudável de redes sociais e oferecem suporte emocional.</p>
+                            
+                            <h4>Metodologia</h4>
+                            <ul>
+                                <li>Treinamento de estudantes monitores</li>
+                                <li>Pareamentos entre mentores e mentorados</li>
+                                <li>Encontros regulares (presenciais e online)</li>
+                                <li>Supervisão por psicólogo escolar</li>
+                            </ul>
+                            
+                            <h4>Recursos Necessários</h4>
+                            <ul>
+                                <li>Espaço para encontros</li>
+                                <li>Material de treinamento</li>
+                                <li>Supervisão profissional</li>
+                                <li>Sistema de comunicação (app/grupo)</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="intervention-card">
+                        <div class="intervention-header">
+                            <div class="intervention-icon">
+                                <i class="fas fa-clock" aria-hidden="true"></i>
+                            </div>
+                            <div class="intervention-meta">
+                                <h3>Campanha "Menos Tela, Mais Vida"</h3>
+                                <div class="intervention-tags">
+                                    <span class="tag">4 semanas</span>
+                                    <span class="tag">Toda escola</span>
+                                    <span class="tag">Desafio</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="intervention-content">
+                            <h4>Objetivo</h4>
+                            <p>Promover reflexão sobre tempo de tela através de desafios práticos, incentivando atividades offline e melhorando o bem-estar geral dos estudantes.</p>
+                            
+                            <h4>Metodologia</h4>
+                            <ul>
+                                <li>Desafios semanais de redução de tela</li>
+                                <li>Atividades alternativas (esportes, arte, leitura)</li>
+                                <li>Monitoramento através de app ou diário</li>
+                                <li>Premiação para participantes</li>
+                            </ul>
+                            
+                            <h4>Recursos Necessários</h4>
+                            <ul>
+                                <li>Material promocional (cartazes, panfletos)</li>
+                                <li>Espaços para atividades alternativas</li>
+                                <li>Prêmios/reconhecimentos</li>
+                                <li>Coordenação entre professores</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="intervention-card">
+                        <div class="intervention-header">
+                            <div class="intervention-icon">
+                                <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                            </div>
+                            <div class="intervention-meta">
+                                <h3>Zonas Livres de Celular</h3>
+                                <div class="intervention-tags">
+                                    <span class="tag">Permanente</span>
+                                    <span class="tag">Espaços físicos</span>
+                                    <span class="tag">Política escolar</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="intervention-content">
+                            <h4>Objetivo</h4>
+                            <p>Criar espaços na escola onde o uso de dispositivos móveis é restrito, promovendo interação face a face, concentração nos estudos e momentos de descanso mental.</p>
+                            
+                            <h4>Metodologia</h4>
+                            <ul>
+                                <li>Definição de espaços livres de celular</li>
+                                <li>Criação de políticas claras e consensuais</li>
+                                <li>Atividades especiais para essas zonas</li>
+                                <li>Monitoramento e avaliação contínua</li>
+                            </ul>
+                            
+                            <h4>Recursos Necessários</h4>
+                            <ul>
+                                <li>Sinalização visual dos espaços</li>
+                                <li>Armários/lockers para guardar dispositivos</li>
+                                <li>Materiais para atividades alternativas</li>
+                                <li>Suporte da direção e professores</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="intervention-card">
+                        <div class="intervention-header">
+                            <div class="intervention-icon">
+                                <i class="fas fa-brain" aria-hidden="true"></i>
+                            </div>
+                            <div class="intervention-meta">
+                                <h3>Mindfulness e Bem-estar Digital</h3>
+                                <div class="intervention-tags">
+                                    <span class="tag">6 semanas</span>
+                                    <span class="tag">Meditação</span>
+                                    <span class="tag">Autoconhecimento</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="intervention-content">
+                            <h4>Objetivo</h4>
+                            <p>Ensinar técnicas de mindfulness e autoconsciência para ajudar estudantes a desenvolver uma relação mais equilibrada e intencional com a tecnologia.</p>
+                            
+                            <h4>Metodologia</h4>
+                            <ul>
+                                <li>Sessões de meditação guiada</li>
+                                <li>Exercícios de autoobservação digital</li>
+                                <li>Técnicas de respiração e relaxamento</li>
+                                <li>Diários de reflexão sobre uso de tecnologia</li>
+                            </ul>
+                            
+                            <h4>Recursos Necessários</h4>
+                            <ul>
+                                <li>Sala tranquila para práticas</li>
+                                <li>Instrutor de mindfulness ou professor treinado</li>
+                                <li>Materiais para meditação (almofadas, etc.)</li>
+                                <li>Apps de meditação (opcional)</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="intervention-card">
+                        <div class="intervention-header">
+                            <div class="intervention-icon">
+                                <i class="fas fa-family" aria-hidden="true"></i>
+                            </div>
+                            <div class="intervention-meta">
+                                <h3>Oficinas para Pais e Responsáveis</h3>
+                                <div class="intervention-tags">
+                                    <span class="tag">4 encontros</span>
+                                    <span class="tag">Famílias</span>
+                                    <span class="tag">Mensal</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="intervention-content">
+                            <h4>Objetivo</h4>
+                            <p>Capacitar pais e responsáveis para apoiar seus filhos no uso consciente de tecnologia, fornecendo ferramentas práticas e conhecimento sobre saúde mental digital.</p>
+                            
+                            <h4>Metodologia</h4>
+                            <ul>
+                                <li>Palestras informativas sobre redes sociais</li>
+                                <li>Dinâmicas em grupos de pais</li>
+                                <li>Simulações de conversas difíceis</li>
+                                <li>Material de apoio para casa</li>
+                            </ul>
+                            
+                            <h4>Recursos Necessários</h4>
+                            <ul>
+                                <li>Auditório ou sala grande</li>
+                                <li>Especialista em saúde mental digital</li>
+                                <li>Material informativo impresso</li>
+                                <li>Flexibilidade de horários (noites/fins de semana)</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Measurement Plan -->
+            <section class="measurement-section" aria-labelledby="measurement-title">
+                <h2 id="measurement-title" class="section-title">Plano de Medição de Impacto</h2>
+                
+                <div class="measurement-overview">
+                    <div class="measurement-card">
+                        <h3>Pré-Intervenção</h3>
+                        <p>Linha de base para comparação</p>
+                        <ul>
+                            <li>Survey de bem-estar digital</li>
+                            <li>Medição de tempo de tela</li>
+                            <li>Avaliação de sintomas de ansiedade</li>
+                            <li>Questionário sobre hábitos digitais</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="measurement-card">
+                        <h3>Durante Intervenção</h3>
+                        <p>Monitoramento contínuo</p>
+                        <ul>
+                            <li>Check-ins semanais</li>
+                            <li>Observação participante</li>
+                            <li>Feedback qualitativo</li>
+                            <li>Ajustes na implementação</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="measurement-card">
+                        <h3>Pós-Intervenção</h3>
+                        <p>Avaliação de resultados</p>
+                        <ul>
+                            <li>Repetição dos surveys iniciais</li>
+                            <li>Entrevistas em profundidade</li>
+                            <li>Análise de mudanças comportamentais</li>
+                            <li>Follow-up após 3 meses</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Survey Form -->
+                <div class="survey-container">
+                    <h3>Questionário de Avaliação (Pré/Pós Intervenção)</h3>
+                    <p class="survey-intro">
+                        Este questionário é anônimo e será usado apenas para fins de pesquisa. Suas respostas nos ajudarão a entender melhor o impacto das intervenções na saúde mental e bem-estar digital.
+                    </p>
+                    
+                    <form class="survey-form" id="impact-survey" aria-labelledby="survey-title">
+                        <div class="survey-section">
+                            <h4>Informações Básicas</h4>
+                            
+                            <div class="form-group">
+                                <label for="survey-period">Período da avaliação:</label>
+                                <select id="survey-period" name="period" required>
+                                    <option value="">Selecione...</option>
+                                    <option value="pre">Pré-intervenção</option>
+                                    <option value="post">Pós-intervenção</option>
+                                    <option value="followup">Follow-up (3 meses)</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="survey-age">Faixa etária:</label>
+                                <select id="survey-age" name="age_group" required>
+                                    <option value="">Selecione...</option>
+                                    <option value="13-15">13-15 anos</option>
+                                    <option value="16-18">16-18 anos</option>
+                                    <option value="19-21">19-21 anos</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="survey-intervention">Qual intervenção você participou? (opcional)</label>
+                                <select id="survey-intervention" name="intervention_type">
+                                    <option value="">Não participei/Não se aplica</option>
+                                    <option value="workshops">Oficinas de Letramento Digital</option>
+                                    <option value="peer-support">Programa de Peer Support</option>
+                                    <option value="less-screen">Campanha "Menos Tela, Mais Vida"</option>
+                                    <option value="phone-free">Zonas Livres de Celular</option>
+                                    <option value="mindfulness">Mindfulness e Bem-estar Digital</option>
+                                    <option value="parents">Oficinas para Pais</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="survey-section">
+                            <h4>Bem-estar e Humor</h4>
+                            <p class="section-instruction">Para cada afirmação, indique o quanto concorda em uma escala de 1 (discordo totalmente) a 5 (concordo totalmente):</p>
+                            
+                            <div class="likert-question">
+                                <label>Me sinto bem com minha vida em geral</label>
+                                <div class="likert-scale">
+                                    <input type="radio" id="wellbeing_1" name="wellbeing_general" value="1" required>
+                                    <label for="wellbeing_1">1</label>
+                                    <input type="radio" id="wellbeing_2" name="wellbeing_general" value="2">
+                                    <label for="wellbeing_2">2</label>
+                                    <input type="radio" id="wellbeing_3" name="wellbeing_general" value="3">
+                                    <label for="wellbeing_3">3</label>
+                                    <input type="radio" id="wellbeing_4" name="wellbeing_general" value="4">
+                                    <label for="wellbeing_4">4</label>
+                                    <input type="radio" id="wellbeing_5" name="wellbeing_general" value="5">
+                                    <label for="wellbeing_5">5</label>
+                                </div>
+                            </div>
+                            
+                            <div class="likert-question">
+                                <label>Tenho dormido bem nas últimas semanas</label>
+                                <div class="likert-scale">
+                                    <input type="radio" id="sleep_1" name="sleep_quality" value="1" required>
+                                    <label for="sleep_1">1</label>
+                                    <input type="radio" id="sleep_2" name="sleep_quality" value="2">
+                                    <label for="sleep_2">2</label>
+                                    <input type="radio" id="sleep_3" name="sleep_quality" value="3">
+                                    <label for="sleep_3">3</label>
+                                    <input type="radio" id="sleep_4" name="sleep_quality" value="4">
+                                    <label for="sleep_4">4</label>
+                                    <input type="radio" id="sleep_5" name="sleep_quality" value="5">
+                                    <label for="sleep_5">5</label>
+                                </div>
+                            </div>
+                            
+                            <div class="likert-question">
+                                <label>Me sinto ansioso(a) ou nervoso(a) com frequência</label>
+                                <div class="likert-scale">
+                                    <input type="radio" id="anxiety_1" name="anxiety_level" value="1" required>
+                                    <label for="anxiety_1">1</label>
+                                    <input type="radio" id="anxiety_2" name="anxiety_level" value="2">
+                                    <label for="anxiety_2">2</label>
+                                    <input type="radio" id="anxiety_3" name="anxiety_level" value="3">
+                                    <label for="anxiety_3">3</label>
+                                    <input type="radio" id="anxiety_4" name="anxiety_level" value="4">
+                                    <label for="anxiety_4">4</label>
+                                    <input type="radio" id="anxiety_5" name="anxiety_level" value="5">
+                                    <label for="anxiety_5">5</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="survey-section">
+                            <h4>Uso de Redes Sociais</h4>
+                            <p class="section-instruction">Sobre seus hábitos digitais:</p>
+                            
+                            <div class="likert-question">
+                                <label>Passo muito tempo nas redes sociais sem perceber</label>
+                                <div class="likert-scale">
+                                    <input type="radio" id="time_1" name="time_awareness" value="1" required>
+                                    <label for="time_1">1</label>
+                                    <input type="radio" id="time_2" name="time_awareness" value="2">
+                                    <label for="time_2">2</label>
+                                    <input type="radio" id="time_3" name="time_awareness" value="3">
+                                    <label for="time_3">3</label>
+                                    <input type="radio" id="time_4" name="time_awareness" value="4">
+                                    <label for="time_4">4</label>
+                                    <input type="radio" id="time_5" name="time_awareness" value="5">
+                                    <label for="time_5">5</label>
+                                </div>
+                            </div>
+                            
+                            <div class="likert-question">
+                                <label>Me comparo com pessoas que vejo nas redes sociais</label>
+                                <div class="likert-scale">
+                                    <input type="radio" id="comparison_1" name="social_comparison" value="1" required>
+                                    <label for="comparison_1">1</label>
+                                    <input type="radio" id="comparison_2" name="social_comparison" value="2">
+                                    <label for="comparison_2">2</label>
+                                    <input type="radio" id="comparison_3" name="social_comparison" value="3">
+                                    <label for="comparison_3">3</label>
+                                    <input type="radio" id="comparison_4" name="social_comparison" value="4">
+                                    <label for="comparison_4">4</label>
+                                    <input type="radio" id="comparison_5" name="social_comparison" value="5">
+                                    <label for="comparison_5">5</label>
+                                </div>
+                            </div>
+                            
+                            <div class="likert-question">
+                                <label>Sinto pressão para ter uma vida "perfeita" como vejo online</label>
+                                <div class="likert-scale">
+                                    <input type="radio" id="pressure_1" name="perfection_pressure" value="1" required>
+                                    <label for="pressure_1">1</label>
+                                    <input type="radio" id="pressure_2" name="perfection_pressure" value="2">
+                                    <label for="pressure_2">2</label>
+                                    <input type="radio" id="pressure_3" name="perfection_pressure" value="3">
+                                    <label for="pressure_3">3</label>
+                                    <input type="radio" id="pressure_4" name="perfection_pressure" value="4">
+                                    <label for="pressure_4">4</label>
+                                    <input type="radio" id="pressure_5" name="perfection_pressure" value="5">
+                                    <label for="pressure_5">5</label>
+                                </div>
+                            </div>
+                            
+                            <div class="likert-question">
+                                <label>Consigo controlar meu tempo nas redes sociais</label>
+                                <div class="likert-scale">
+                                    <input type="radio" id="control_1" name="self_control" value="1" required>
+                                    <label for="control_1">1</label>
+                                    <input type="radio" id="control_2" name="self_control" value="2">
+                                    <label for="control_2">2</label>
+                                    <input type="radio" id="control_3" name="self_control" value="3">
+                                    <label for="control_3">3</label>
+                                    <input type="radio" id="control_4" name="self_control" value="4">
+                                    <label for="control_4">4</label>
+                                    <input type="radio" id="control_5" name="self_control" value="5">
+                                    <label for="control_5">5</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="survey-section">
+                            <h4>Comportamento Digital</h4>
+                            
+                            <div class="form-group">
+                                <label for="screen-time">Quantas horas por dia você estima passar em redes sociais?</label>
+                                <select id="screen-time" name="daily_screen_time" required>
+                                    <option value="">Selecione...</option>
+                                    <option value="0-1">Menos de 1 hora</option>
+                                    <option value="1-2">1-2 horas</option>
+                                    <option value="2-4">2-4 horas</option>
+                                    <option value="4-6">4-6 horas</option>
+                                    <option value="6+">Mais de 6 horas</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="most-used">Qual rede social você mais usa?</label>
+                                <select id="most-used" name="primary_platform" required>
+                                    <option value="">Selecione...</option>
+                                    <option value="instagram">Instagram</option>
+                                    <option value="tiktok">TikTok</option>
+                                    <option value="twitter">Twitter/X</option>
+                                    <option value="youtube">YouTube</option>
+                                    <option value="whatsapp">WhatsApp</option>
+                                    <option value="other">Outra</option>
+                                </select>
+                            </div>
+                            
+                            <div class="likert-question">
+                                <label>Me sinto mal quando não posso acessar as redes sociais</label>
+                                <div class="likert-scale">
+                                    <input type="radio" id="withdrawal_1" name="withdrawal_symptoms" value="1" required>
+                                    <label for="withdrawal_1">1</label>
+                                    <input type="radio" id="withdrawal_2" name="withdrawal_symptoms" value="2">
+                                    <label for="withdrawal_2">2</label>
+                                    <input type="radio" id="withdrawal_3" name="withdrawal_symptoms" value="3">
+                                    <label for="withdrawal_3">3</label>
+                                    <input type="radio" id="withdrawal_4" name="withdrawal_symptoms" value="4">
+                                    <label for="withdrawal_4">4</label>
+                                    <input type="radio" id="withdrawal_5" name="withdrawal_symptoms" value="5">
+                                    <label for="withdrawal_5">5</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="survey-actions">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                                Enviar Respostas
+                            </button>
+                            <button type="reset" class="btn btn-outline">
+                                <i class="fas fa-undo" aria-hidden="true"></i>
+                                Limpar Formulário
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <div class="export-section">
+                        <h4>Exportar Dados da Pesquisa</h4>
+                        <p>Para educadores e pesquisadores: exporte as respostas coletadas para análise.</p>
+                        <button id="export-survey" class="btn btn-secondary">
+                            <i class="fas fa-download" aria-hidden="true"></i>
+                            Exportar Respostas (CSV)
+                        </button>
+                        <p class="export-note">
+                            <strong>Nota:</strong> Apenas dados anônimos são exportados. Nenhuma informação pessoal identificável é incluída.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sesiverso</h3>
+                    <p>Projeto de feira de ciências focado na saúde mental dos jovens na era digital.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Úteis</h4>
+                    <ul>
+                        <li><a href="como-ajudar.html">Como Procurar Ajuda</a></li>
+                        <li><a href="https://cvv.org.br/" target="_blank" rel="noopener noreferrer">CVV - Centro de Valorização da Vida</a></li>
+                        <li><a href="contato.html">Entre em Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Emergência</h4>
+                    <p><strong>CVV - 188</strong><br>
+                    Atendimento gratuito 24h</p>
+                    <a href="tel:188" class="btn btn-small">Ligar Agora</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sesiverso. Este projeto é educacional e sem fins lucrativos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+    <style>
+        /* Estilos específicos para a página de intervenções */
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-turquoise) 100%);
+            color: var(--white);
+            padding: var(--spacing-2xl) 0;
+            text-align: center;
+        }
+
+        .overview-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .stat-item {
+            background: var(--white);
+            padding: var(--spacing-xl);
+            border-radius: var(--border-radius-lg);
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--secondary-turquoise);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .stat-label {
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .interventions-grid {
+            display: grid;
+            gap: var(--spacing-xl);
+            margin-bottom: var(--spacing-3xl);
+        }
+
+        .intervention-card {
+            background: var(--white);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .intervention-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .intervention-header {
+            background: var(--light-gray);
+            padding: var(--spacing-lg);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-lg);
+        }
+
+        .intervention-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--secondary-turquoise);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .intervention-meta h3 {
+            color: var(--primary-blue);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .intervention-tags {
+            display: flex;
+            gap: var(--spacing-sm);
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: var(--primary-blue);
+            color: white;
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--border-radius);
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .intervention-content {
+            padding: var(--spacing-lg);
+        }
+
+        .intervention-content h4 {
+            color: var(--primary-blue);
+            margin-bottom: var(--spacing-sm);
+            margin-top: var(--spacing-lg);
+        }
+
+        .intervention-content h4:first-child {
+            margin-top: 0;
+        }
+
+        .intervention-content ul {
+            margin-left: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .measurement-overview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .measurement-card {
+            background: var(--white);
+            padding: var(--spacing-xl);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--secondary-turquoise);
+        }
+
+        .measurement-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .measurement-card ul {
+            margin-left: var(--spacing-lg);
+        }
+
+        /* Survey Styles */
+        .survey-container {
+            background: var(--light-gray);
+            padding: var(--spacing-2xl);
+            border-radius: var(--border-radius-lg);
+            margin-top: var(--spacing-2xl);
+        }
+
+        .survey-intro {
+            background: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius);
+            margin-bottom: var(--spacing-xl);
+            border-left: 4px solid var(--secondary-turquoise);
+        }
+
+        .survey-form {
+            background: var(--white);
+            padding: var(--spacing-xl);
+            border-radius: var(--border-radius-lg);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .survey-section {
+            margin-bottom: var(--spacing-2xl);
+            padding-bottom: var(--spacing-lg);
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .survey-section:last-child {
+            border-bottom: none;
+        }
+
+        .survey-section h4 {
+            color: var(--primary-blue);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .section-instruction {
+            font-style: italic;
+            color: var(--text-light);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .form-group {
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: var(--spacing-sm);
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .form-group select {
+            width: 100%;
+            padding: var(--spacing-sm) var(--spacing-md);
+            border: 2px solid #E5E7EB;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--secondary-turquoise);
+            box-shadow: 0 0 0 3px rgba(57, 160, 166, 0.1);
+        }
+
+        .likert-question {
+            margin-bottom: var(--spacing-xl);
+            padding: var(--spacing-lg);
+            background: var(--light-gray);
+            border-radius: var(--border-radius);
+        }
+
+        .likert-question > label {
+            display: block;
+            margin-bottom: var(--spacing-md);
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .likert-scale {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+
+        .likert-scale input[type="radio"] {
+            margin: 0;
+        }
+
+        .likert-scale label {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            margin: 0;
+            text-align: center;
+        }
+
+        .survey-actions {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-xl);
+            flex-wrap: wrap;
+        }
+
+        .export-section {
+            background: var(--white);
+            padding: var(--spacing-xl);
+            border-radius: var(--border-radius-lg);
+            text-align: center;
+        }
+
+        .export-section h4 {
+            color: var(--primary-blue);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .export-note {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            margin-top: var(--spacing-md);
+        }
+
+        @media (max-width: 768px) {
+            .intervention-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .likert-scale {
+                flex-direction: column;
+                gap: var(--spacing-md);
+            }
+
+            .likert-scale label {
+                font-size: 1rem;
+            }
+
+            .survey-actions {
+                flex-direction: column;
+            }
+
+            .survey-actions .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria - Imagens e Infográficos | Sesiverso</title>
+    <meta name="description" content="Galeria de imagens, infográficos e materiais visuais do projeto sobre o impacto dos influenciadores na saúde mental dos jovens.">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Galeria - Imagens e Infográficos">
+    <meta property="og:description" content="Galeria visual do projeto sobre o impacto dos influenciadores na saúde mental dos jovens.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="assets/images/og-image.jpg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Emergency Help Button (Fixed) -->
+    <div id="emergency-help" class="emergency-help" role="region" aria-label="Ajuda de emergência">
+        <button id="emergency-btn" class="emergency-btn" aria-label="Preciso de ajuda agora - CVV 188">
+            <i class="fas fa-heart" aria-hidden="true"></i>
+            <span>Preciso de ajuda agora</span>
+        </button>
+        
+        <div id="emergency-modal" class="emergency-modal" role="dialog" aria-modal="true" aria-labelledby="emergency-title" style="display: none;">
+            <div class="emergency-content">
+                <h3 id="emergency-title">Se você está em risco ou em crise</h3>
+                <p>Se estiver em risco imediato, ligue já para o CVV — 188 (atendimento 24h, gratuito e anônimo) ou acesse o chat.</p>
+                <div class="emergency-actions">
+                    <a href="tel:188" class="btn btn-emergency" aria-label="Ligar para CVV - 188">
+                        <i class="fas fa-phone" aria-hidden="true"></i>
+                        Ligar para 188
+                    </a>
+                    <a href="https://cvv.org.br/" target="_blank" rel="noopener noreferrer" class="btn btn-emergency-secondary" aria-label="Ir para o chat do CVV - abre em nova aba">
+                        <i class="fas fa-comments" aria-hidden="true"></i>
+                        Chat do CVV
+                    </a>
+                </div>
+                <button id="close-emergency" class="close-btn" aria-label="Fechar janela de ajuda">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="nav" role="navigation" aria-label="Menu principal">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <h1>Sesiverso</h1>
+                    <span class="nav-subtitle">Feira de Ciências</span>
+                </div>
+                
+                <button class="nav-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
+                
+                <ul class="nav-menu" role="menubar">
+                    <li role="none"><a href="index.html" class="nav-link" role="menuitem">Início</a></li>
+                    <li role="none"><a href="artigo.html" class="nav-link" role="menuitem">Artigo</a></li>
+                    <li role="none"><a href="video.html" class="nav-link" role="menuitem">Vídeo</a></li>
+                    <li role="none"><a href="filmes.html" class="nav-link" role="menuitem">Filmes</a></li>
+                    <li role="none"><a href="reportagens.html" class="nav-link" role="menuitem">Reportagens</a></li>
+                    <li role="none"><a href="intervencoes.html" class="nav-link" role="menuitem">Intervenções</a></li>
+                    <li role="none"><a href="como-ajudar.html" class="nav-link" role="menuitem">Como Ajudar</a></li>
+                    <li role="none"><a href="galeria.html" class="nav-link active" role="menuitem" aria-current="page">Galeria</a></li>
+                    <li role="none"><a href="contato.html" class="nav-link" role="menuitem">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header" role="banner">
+        <div class="container">
+            <h1 class="page-title">Galeria Visual</h1>
+            <p class="page-description">Imagens, infográficos e materiais visuais do projeto Sesiverso</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content" role="main">
+        <div class="container">
+            
+            <!-- Filter Section -->
+            <section class="filter-section" aria-labelledby="filter-title">
+                <h2 id="filter-title" class="section-title">Categorias</h2>
+                <div class="filter-buttons" role="group" aria-label="Filtros de categoria">
+                    <button class="filter-btn active" data-filter="all" aria-pressed="true">Todos</button>
+                    <button class="filter-btn" data-filter="infographics" aria-pressed="false">Infográficos</button>
+                    <button class="filter-btn" data-filter="posters" aria-pressed="false">Posters</button>
+                    <button class="filter-btn" data-filter="charts" aria-pressed="false">Gráficos</button>
+                    <button class="filter-btn" data-filter="photos" aria-pressed="false">Fotos</button>
+                </div>
+            </section>
+
+            <!-- Gallery Grid -->
+            <section class="gallery-section" aria-labelledby="gallery-title">
+                <h2 id="gallery-title" class="section-title">Materiais Visuais</h2>
+                
+                <div class="gallery-grid" id="gallery-container">
+                    <!-- Infográficos -->
+                    <article class="gallery-item" data-category="infographics">
+                        <div class="gallery-image">
+                            <img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Infográfico sobre estatísticas de uso de redes sociais por jovens brasileiros, mostrando tempo médio diário e plataformas mais utilizadas" loading="lazy">
+                            <div class="gallery-overlay">
+                                <button class="gallery-action" aria-label="Ver em tamanho completo">
+                                    <i class="fas fa-expand" aria-hidden="true"></i>
+                                </button>
+                                <button class="gallery-action" aria-label="Baixar imagem">
+                                    <i class="fas fa-download" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h3>Estatísticas de Uso - Jovens Brasileiros</h3>
+                            <p>Infográfico com dados sobre tempo de uso diário de redes sociais e plataformas preferidas entre jovens de 15-25 anos.</p>
+                            <div class="gallery-tags">
+                                <span class="tag">Estatísticas</span>
+                                <span class="tag">Brasil</span>
+                                <span class="tag">Tempo de Uso</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-item" data-category="infographics">
+                        <div class="gallery-image">
+                            <img src="https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Infográfico explicativo sobre os sinais de alerta de vício em redes sociais, com ícones ilustrativos e texto explicativo" loading="lazy">
+                            <div class="gallery-overlay">
+                                <button class="gallery-action" aria-label="Ver em tamanho completo">
+                                    <i class="fas fa-expand" aria-hidden="true"></i>
+                                </button>
+                                <button class="gallery-action" aria-label="Baixar imagem">
+                                    <i class="fas fa-download" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h3>Sinais de Alerta - Uso Problemático</h3>
+                            <p>Guia visual identificando comportamentos que podem indicar uso problemático de redes sociais.</p>
+                            <div class="gallery-tags">
+                                <span class="tag">Sinais de Alerta</span>
+                                <span class="tag">Prevenção</span>
+                                <span class="tag">Saúde Mental</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-item" data-category="charts">
+                        <div class="gallery-image">
+                            <img src="https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Gráfico de pizza mostrando a distribuição de sintomas de ansiedade relacionados ao uso de redes sociais entre participantes da pesquisa" loading="lazy">
+                            <div class="gallery-overlay">
+                                <button class="gallery-action" aria-label="Ver em tamanho completo">
+                                    <i class="fas fa-expand" aria-hidden="true"></i>
+                                </button>
+                                <button class="gallery-action" aria-label="Baixar imagem">
+                                    <i class="fas fa-download" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h3>Distribuição de Sintomas de Ansiedade</h3>
+                            <p>Resultado da pesquisa mostrando como sintomas de ansiedade se relacionam com o uso de influenciadores digitais.</p>
+                            <div class="gallery-tags">
+                                <span class="tag">Pesquisa</span>
+                                <span class="tag">Ansiedade</span>
+                                <span class="tag">Dados</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-item" data-category="posters">
+                        <div class="gallery-image">
+                            <img src="https://images.pexels.com/photos/590018/pexels-photo-590018.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Poster A3 do projeto Sesiverso com título, resumo da pesquisa, principais descobertas e informações de contato" loading="lazy">
+                            <div class="gallery-overlay">
+                                <button class="gallery-action" aria-label="Ver em tamanho completo">
+                                    <i class="fas fa-expand" aria-hidden="true"></i>
+                                </button>
+                                <button class="gallery-action" aria-label="Baixar para impressão">
+                                    <i class="fas fa-print" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                            <div class="print-ready">
+                                <i class="fas fa-print" aria-hidden="true"></i>
+                                Pronto para Impressão A3
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h3>Poster Principal - Sesiverso</h3>
+                            <p>Poster oficial do projeto para apresentação na feira de ciências. Inclui resumo, objetivos e principais resultados.</p>
+                            <div class="gallery-tags">
+                                <span class="tag">Poster Oficial</span>
+                                <span class="tag">A3</span>
+                                <span class="tag">300 DPI</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-item" data-category="posters">
+                        <div class="gallery-image">
+                            <img src="https://images.pexels.com/photos/590019/pexels-photo-590019.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Poster educativo sobre uso consciente de redes sociais com dicas práticas, recursos de ajuda e informações do CVV" loading="lazy">
+                            <div class="gallery-overlay">
+                                <button class="gallery-action" aria-label="Ver em tamanho completo">
+                                    <i class="fas fa-expand" aria-hidden="true"></i>
+                                </button>
+                                <button class="gallery-action" aria-label="Baixar para impressão">
+                                    <i class="fas fa-print" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                            <div class="print-ready">
+                                <i class="fas fa-print" aria-hidden="true"></i>
+                                Pronto para Impressão A3
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h3>Poster Educativo - Uso Consciente</h3>
+                            <p>Material educativo com orientações práticas sobre uso saudável de redes sociais e recursos de apoio.</p>
+                            <div class="gallery-tags">
+                                <span class="tag">Educativo</span>
+                                <span class="tag">A3</span>
+                                <span class="tag">Uso Consciente</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-item" data-category="charts">
+                        <div class="gallery-image">
+                            <img src="https://images.pexels.com/photos/590021/pexels-photo-590021.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Gráfico de barras comparando níveis de autoestima antes e depois da implementação das intervenções escolares" loading="lazy">
+                            <div class="gallery-overlay">
+                                <button class="gallery-action" aria-label="Ver em tamanho completo">
+                                    <i class="fas fa-expand" aria-hidden="true"></i>
+                                </button>
+                                <button class="gallery-action" aria-label="Baixar imagem">
+                                    <i class="fas fa-download" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h3>Resultados das Intervenções - Autoestima</h3>
+                            <p>Comparação dos níveis de autoestima antes e depois da implementação das propostas de intervenção.</p>
+                            <div class="gallery-tags">
+                                <span class="tag">Resultados</span>
+                                <span class="tag">Intervenções</span>
+                                <span class="tag">Autoestima</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-item" data-category="infographics">
+                        <div class="gallery-image">
+                            <img src="https://images.pexels.com/photos/590023/pexels-photo-590023.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Infográfico sobre o impacto dos algoritmos de redes sociais no comportamento dos usuários, com fluxograma explicativo" loading="lazy">
+                            <div class="gallery-overlay">
+                                <button class="gallery-action" aria-label="Ver em tamanho completo">
+                                    <i class="fas fa-expand" aria-hidden="true"></i>
+                                </button>
+                                <button class="gallery-action" aria-label="Baixar imagem">
+                                    <i class="fas fa-download" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h3>Como Funcionam os Algoritmos</h3>
+                            <p>Explicação visual sobre como algoritmos de redes sociais influenciam o que vemos e como isso afeta nosso comportamento.</p>
+                            <div class="gallery-tags">
+                                <span class="tag">Algoritmos</span>
+                                <span class="tag">Educação Digital</span>
+                                <span class="tag">Comportamento</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery-item" data-category="photos">
+                        <div class="gallery-image">
+                            <img src="https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Foto da apresentação do projeto na feira de ciências, mostrando estudantes explicando a pesquisa para visitantes" loading="lazy">
+                            <div class="gallery-overlay">
+                                <button class="gallery-action" aria-label="Ver em tamanho completo">
+                                    <i class="fas fa-expand" aria-hidden="true"></i>
+                                </button>
+                                <button class="gallery-action" aria-label="Baixar imagem">
+                                    <i class="fas fa-download" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h3>Apresentação na Feira de Ciências</h3>
+                            <p>Momento da apresentação do projeto Sesiverso durante a feira de ciências, com interação do público.</p>
+                            <div class="gallery-tags">
+                                <span class="tag">Feira de Ciências</span>
+                                <span class="tag">Apresentação</span>
+                                <span class="tag">Público</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Placeholder para mais imagens -->
+                    <div class="gallery-placeholder" style="grid-column: 1 / -1; text-align: center; padding: 3rem; background-color: var(--light-gray); border-radius: 1rem; border: 2px dashed #CBD5E0;">
+                        <i class="fas fa-images" style="font-size: 3rem; color: var(--text-light); margin-bottom: 1rem;" aria-hidden="true"></i>
+                        <h3>Mais imagens serão adicionadas em breve!</h3>
+                        <p>Para adicionar novas imagens à galeria:</p>
+                        <ol style="text-align: left; display: inline-block; margin: 1rem 0;">
+                            <li>Adicione as imagens na pasta <code>assets/images/</code></li>
+                            <li>Abra o arquivo <code>galeria.html</code></li>
+                            <li>Copie a estrutura dos exemplos acima</li>
+                            <li>Inclua descrições alt detalhadas para acessibilidade</li>
+                        </ol>
+                        <p><em>Lembre-se: use apenas imagens livres de direitos autorais ou com licença adequada</em></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Download Section -->
+            <section class="download-section" aria-labelledby="download-title">
+                <h2 id="download-title" class="section-title">Downloads para Impressão</h2>
+                <div class="download-cards">
+                    <div class="download-card">
+                        <div class="download-icon">
+                            <i class="fas fa-file-image" aria-hidden="true"></i>
+                        </div>
+                        <h3>Poster Principal - A3</h3>
+                        <p>Poster oficial do projeto Sesiverso em alta resolução (300 DPI) pronto para impressão em formato A3.</p>
+                        <div class="download-meta">
+                            <span>PNG • 300 DPI • A3 • 5.2 MB</span>
+                        </div>
+                        <button class="btn btn-primary" aria-label="Baixar poster principal">
+                            <i class="fas fa-download" aria-hidden="true"></i>
+                            Baixar Poster Principal
+                        </button>
+                    </div>
+
+                    <div class="download-card">
+                        <div class="download-icon">
+                            <i class="fas fa-file-image" aria-hidden="true"></i>
+                        </div>
+                        <h3>Poster Educativo - A3</h3>
+                        <p>Material educativo sobre uso consciente de redes sociais em alta resolução para impressão A3.</p>
+                        <div class="download-meta">
+                            <span>PNG • 300 DPI • A3 • 4.8 MB</span>
+                        </div>
+                        <button class="btn btn-primary" aria-label="Baixar poster educativo">
+                            <i class="fas fa-download" aria-hidden="true"></i>
+                            Baixar Poster Educativo
+                        </button>
+                    </div>
+
+                    <div class="download-card">
+                        <div class="download-icon">
+                            <i class="fas fa-file-archive" aria-hidden="true"></i>
+                        </div>
+                        <h3>Todos os Infográficos</h3>
+                        <p>Pacote completo com todos os infográficos e gráficos do projeto em alta resolução.</p>
+                        <div class="download-meta">
+                            <span>ZIP • Múltiplos formatos • 15.3 MB</span>
+                        </div>
+                        <button class="btn btn-secondary" aria-label="Baixar todos os infográficos">
+                            <i class="fas fa-download" aria-hidden="true"></i>
+                            Baixar Pacote Completo
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Usage Guidelines -->
+            <section class="usage-guidelines" aria-labelledby="usage-title">
+                <h2 id="usage-title" class="section-title">Diretrizes de Uso</h2>
+                <div class="guidelines-content">
+                    <div class="guidelines-card">
+                        <h3><i class="fas fa-creative-commons" aria-hidden="true"></i> Licença e Direitos</h3>
+                        <p>Todos os materiais visuais do projeto Sesiverso estão licenciados sob Creative Commons BY-NC-SA 4.0. Isso significa que você pode:</p>
+                        <ul>
+                            <li><strong>Compartilhar:</strong> copiar e redistribuir em qualquer meio ou formato</li>
+                            <li><strong>Adaptar:</strong> remixar, transformar e criar a partir do material</li>
+                        </ul>
+                        <p><strong>Sob as condições:</strong></p>
+                        <ul>
+                            <li><strong>Atribuição:</strong> dar crédito apropriado ao projeto Sesiverso</li>
+                            <li><strong>Não Comercial:</strong> não usar para fins comerciais</li>
+                            <li><strong>Compartilhar Igual:</strong> distribuir sob a mesma licença</li>
+                        </ul>
+                    </div>
+
+                    <div class="guidelines-card">
+                        <h3><i class="fas fa-quote-left" aria-hidden="true"></i> Como Citar</h3>
+                        <p>Ao usar nossos materiais visuais, inclua a seguinte atribuição:</p>
+                        <div class="citation-example">
+                            <p><strong>Imagem/Infográfico:</strong> "Projeto Sesiverso - O Impacto dos Influenciadores na Saúde Mental dos Jovens. [Ano]. Disponível em: [URL do site]"</p>
+                        </div>
+                    </div>
+
+                    <div class="guidelines-card">
+                        <h3><i class="fas fa-print" aria-hidden="true"></i> Especificações de Impressão</h3>
+                        <p>Para melhor qualidade de impressão:</p>
+                        <ul>
+                            <li>Posters A3: use papel de alta qualidade (180-250g/m²)</li>
+                            <li>Configuração: 300 DPI, cores CMYK</li>
+                            <li>Margem de segurança: 5mm em todas as bordas</li>
+                            <li>Para impressão profissional: consulte uma gráfica</li>
+                        </ul>
+                    </div>
+
+                    <div class="guidelines-card">
+                        <h3><i class="fas fa-exclamation-triangle" aria-hidden="true"></i> Limitações e Responsabilidade</h3>
+                        <p>Ao usar nossos materiais, lembre-se:</p>
+                        <ul>
+                            <li>Não modificar informações sobre recursos de ajuda (CVV 188)</li>
+                            <li>Não remover créditos ou informações de contato</li>
+                            <li>Usar apenas em contextos educacionais apropriados</li>
+                            <li>Verificar se o conteúdo está atualizado antes do uso</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sesiverso</h3>
+                    <p>Projeto de feira de ciências focado na saúde mental dos jovens na era digital.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Úteis</h4>
+                    <ul>
+                        <li><a href="como-ajudar.html">Como Procurar Ajuda</a></li>
+                        <li><a href="https://cvv.org.br/" target="_blank" rel="noopener noreferrer">CVV - Centro de Valorização da Vida</a></li>
+                        <li><a href="contato.html">Entre em Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Emergência</h4>
+                    <p><strong>CVV - 188</strong><br>
+                    Atendimento gratuito 24h</p>
+                    <a href="tel:188" class="btn btn-small">Ligar Agora</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sesiverso. Este projeto é educacional e sem fins lucrativos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+    <style>
+        /* Estilos específicos para a página de galeria */
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-turquoise) 100%);
+            color: var(--white);
+            padding: var(--spacing-2xl) 0;
+            text-align: center;
+        }
+
+        .filter-section {
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-md);
+            justify-content: center;
+        }
+
+        .filter-btn {
+            padding: var(--spacing-sm) var(--spacing-lg);
+            border: 2px solid var(--primary-blue);
+            background: transparent;
+            color: var(--primary-blue);
+            border-radius: var(--border-radius-lg);
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: var(--spacing-xl);
+            margin-bottom: var(--spacing-3xl);
+        }
+
+        .gallery-item {
+            background: var(--white);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .gallery-image {
+            position: relative;
+            aspect-ratio: 4/3;
+            overflow: hidden;
+        }
+
+        .gallery-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--spacing-md);
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-action {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--white);
+            color: var(--primary-blue);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            transition: var(--transition);
+        }
+
+        .gallery-action:hover {
+            background: var(--secondary-turquoise);
+            color: var(--white);
+            transform: scale(1.1);
+        }
+
+        .print-ready {
+            position: absolute;
+            top: var(--spacing-md);
+            right: var(--spacing-md);
+            background: var(--success);
+            color: white;
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--border-radius);
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+        }
+
+        .gallery-info {
+            padding: var(--spacing-lg);
+        }
+
+        .gallery-info h3 {
+            color: var(--primary-blue);
+            margin-bottom: var(--spacing-sm);
+            font-size: 1.125rem;
+        }
+
+        .gallery-info p {
+            color: var(--text-light);
+            line-height: 1.5;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .gallery-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-xs);
+        }
+
+        .tag {
+            background: var(--light-gray);
+            color: var(--text-dark);
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--border-radius);
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .download-section {
+            background: var(--light-gray);
+            padding: var(--spacing-2xl) 0;
+            margin: var(--spacing-3xl) 0;
+        }
+
+        .download-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-xl);
+        }
+
+        .download-card {
+            background: var(--white);
+            padding: var(--spacing-xl);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .download-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .download-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--light-gray);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--spacing-lg);
+            color: var(--secondary-turquoise);
+            font-size: 2rem;
+        }
+
+        .download-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .download-card p {
+            color: var(--text-light);
+            line-height: 1.5;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .download-meta {
+            background: var(--light-gray);
+            padding: var(--spacing-sm) var(--spacing-md);
+            border-radius: var(--border-radius);
+            margin-bottom: var(--spacing-lg);
+            font-size: 0.875rem;
+            color: var(--text-light);
+        }
+
+        .usage-guidelines {
+            margin-top: var(--spacing-3xl);
+        }
+
+        .guidelines-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .guidelines-card {
+            background: var(--white);
+            padding: var(--spacing-xl);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--secondary-turquoise);
+        }
+
+        .guidelines-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: var(--spacing-md);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+
+        .guidelines-card ul {
+            margin-left: var(--spacing-lg);
+        }
+
+        .guidelines-card li {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .citation-example {
+            background: var(--light-gray);
+            padding: var(--spacing-md);
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--secondary-turquoise);
+            margin-top: var(--spacing-md);
+        }
+
+        /* Hidden class for filtering */
+        .gallery-item.hidden {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .download-cards,
+            .guidelines-content {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-overlay {
+                opacity: 1;
+                background: rgba(0, 0, 0, 0.5);
+            }
+        }
+    </style>
+
+    <script>
+        // Filtros funcionais para a galeria
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.dataset.filter;
+
+                    // Update active button
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                        btn.setAttribute('aria-pressed', 'false');
+                    });
+                    this.classList.add('active');
+                    this.setAttribute('aria-pressed', 'true');
+
+                    // Filter items
+                    galleryItems.forEach(item => {
+                        if (filter === 'all' || item.dataset.category === filter) {
+                            item.classList.remove('hidden');
+                        } else {
+                            item.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+
+            // Modal functionality for full-size images (basic implementation)
+            const galleryActions = document.querySelectorAll('.gallery-action');
+            galleryActions.forEach(action => {
+                action.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const icon = this.querySelector('i');
+                    if (icon.classList.contains('fa-expand')) {
+                        // Full size view - implementar modal se necessário
+                        alert('Funcionalidade de visualização em tamanho completo será implementada.');
+                    } else if (icon.classList.contains('fa-download')) {
+                        // Download - implementar download se necessário
+                        alert('Funcionalidade de download será implementada.');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

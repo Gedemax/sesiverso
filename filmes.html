@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmes e Documentários - Saúde Mental e Redes Sociais | Sesiverso</title>
+    <meta name="description" content="Lista curada de filmes e documentários que abordam temas relacionados à saúde mental, redes sociais e influência digital na vida dos jovens.">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Filmes e Documentários - Saúde Mental e Redes Sociais">
+    <meta property="og:description" content="Lista curada de filmes e documentários sobre saúde mental, redes sociais e influência digital.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="assets/images/og-image.jpg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Emergency Help Button (Fixed) -->
+    <div id="emergency-help" class="emergency-help" role="region" aria-label="Ajuda de emergência">
+        <button id="emergency-btn" class="emergency-btn" aria-label="Preciso de ajuda agora - CVV 188">
+            <i class="fas fa-heart" aria-hidden="true"></i>
+            <span>Preciso de ajuda agora</span>
+        </button>
+        
+        <div id="emergency-modal" class="emergency-modal" role="dialog" aria-modal="true" aria-labelledby="emergency-title" style="display: none;">
+            <div class="emergency-content">
+                <h3 id="emergency-title">Se você está em risco ou em crise</h3>
+                <p>Se estiver em risco imediato, ligue já para o CVV — 188 (atendimento 24h, gratuito e anônimo) ou acesse o chat.</p>
+                <div class="emergency-actions">
+                    <a href="tel:188" class="btn btn-emergency" aria-label="Ligar para CVV - 188">
+                        <i class="fas fa-phone" aria-hidden="true"></i>
+                        Ligar para 188
+                    </a>
+                    <a href="https://cvv.org.br/" target="_blank" rel="noopener noreferrer" class="btn btn-emergency-secondary" aria-label="Ir para o chat do CVV - abre em nova aba">
+                        <i class="fas fa-comments" aria-hidden="true"></i>
+                        Chat do CVV
+                    </a>
+                </div>
+                <button id="close-emergency" class="close-btn" aria-label="Fechar janela de ajuda">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="nav" role="navigation" aria-label="Menu principal">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <h1>Sesiverso</h1>
+                    <span class="nav-subtitle">Feira de Ciências</span>
+                </div>
+                
+                <button class="nav-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
+                
+                <ul class="nav-menu" role="menubar">
+                    <li role="none"><a href="index.html" class="nav-link" role="menuitem">Início</a></li>
+                    <li role="none"><a href="artigo.html" class="nav-link" role="menuitem">Artigo</a></li>
+                    <li role="none"><a href="video.html" class="nav-link" role="menuitem">Vídeo</a></li>
+                    <li role="none"><a href="filmes.html" class="nav-link active" role="menuitem" aria-current="page">Filmes</a></li>
+                    <li role="none"><a href="reportagens.html" class="nav-link" role="menuitem">Reportagens</a></li>
+                    <li role="none"><a href="intervencoes.html" class="nav-link" role="menuitem">Intervenções</a></li>
+                    <li role="none"><a href="como-ajudar.html" class="nav-link" role="menuitem">Como Ajudar</a></li>
+                                        <li role="none"><a href="contato.html" class="nav-link" role="menuitem">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header" role="banner">
+        <div class="container">
+            <h1 class="page-title">Filmes e Documentários</h1>
+            <p class="page-description">Seleção de produções cinematográficas que abordam saúde mental, redes sociais e os desafios da era digital</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content" role="main">
+        <div class="container">
+            
+            <!-- Filter Section -->
+            <section class="filter-section" aria-labelledby="filter-title">
+                <h2 id="filter-title" class="section-title">Categorias</h2>
+                <div class="filter-buttons" role="group" aria-label="Filtros de categoria">
+                    <button class="filter-btn active" data-filter="all" aria-pressed="true">Todos</button>
+                    <button class="filter-btn" data-filter="documentary" aria-pressed="false">Documentários</button>
+                    <button class="filter-btn" data-filter="drama" aria-pressed="false">Drama</button>
+                    <button class="filter-btn" data-filter="teen" aria-pressed="false">Jovem Adulto</button>
+                    <button class="filter-btn" data-filter="social-media" aria-pressed="false">Redes Sociais</button>
+                </div>
+            </section>
+
+            <!-- Movies Grid -->
+            <section class="movies-section" aria-labelledby="movies-title">
+                <h2 id="movies-title" class="section-title">Lista de Filmes</h2>
+                
+                <div class="movies-grid" id="movies-container">
+                    <!-- {{FILMES_LIST}} será substituído pela lista real -->
+                    
+                    <!-- Documentários -->
+                    <article class="movie-card" data-category="documentary social-media">
+                        <div class="movie-poster">
+                            <img src="public/social_dilema.jpeg" alt="Poster do documentário O Dilema das Redes" loading="lazy">
+                            <div class="movie-overlay">
+                                <div class="movie-rating">★★★★☆</div>
+                                <div class="movie-category">Documentário</div>
+                            </div>
+                        </div>
+                        <div class="movie-info">
+                            <h3 class="movie-title">O Dilema das Redes</h3>
+                            <div class="movie-meta">
+                                <span class="movie-year">2020</span>
+                                <span class="movie-duration">94 min</span>
+                                <span class="movie-age">12+</span>
+                            </div>
+                            <p class="movie-synopsis">
+                                Documentário que expõe os perigos das redes sociais através de depoimentos de ex-executivos de grandes empresas de tecnologia. Mostra como algoritmos afetam comportamentos e saúde mental.
+                            </p>
+                            <div class="movie-themes">
+                                <span class="theme-tag">Algoritmos</span>
+                                <span class="theme-tag">Vício Digital</span>
+                                <span class="theme-tag">Manipulação</span>
+                            </div>
+                            <div class="movie-actions">
+                                <a href="https://www.netflix.com/br/title/81254224" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                    <i class="fas fa-play" aria-hidden="true"></i>
+                                    Ver na Netflix
+                                </a>
+                                <button class="btn btn-outline" aria-label="Ver mais detalhes sobre O Dilema das Redes">
+                                    <i class="fas fa-info-circle" aria-hidden="true"></i>
+                                    Detalhes
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card" data-category="drama teen">
+                        <div class="movie-poster">
+                            <img src="public/eighth.jpeg" alt="Poster do filme Eighth Grade" loading="lazy">
+                            <div class="movie-overlay">
+                                <div class="movie-rating">★★★★★</div>
+                                <div class="movie-category">Drama</div>
+                            </div>
+                        </div>
+                        <div class="movie-info">
+                            <h3 class="movie-title">Eighth Grade</h3>
+                            <div class="movie-meta">
+                                <span class="movie-year">2018</span>
+                                <span class="movie-duration">93 min</span>
+                                <span class="movie-age">14+</span>
+                            </div>
+                            <p class="movie-synopsis">
+                                Drama sobre uma adolescente tímida navegando pelos desafios do ensino médio e redes sociais. Retrato realista da ansiedade social e pressões da adolescência moderna.
+                            </p>
+                            <div class="movie-themes">
+                                <span class="theme-tag">Adolescência</span>
+                                <span class="theme-tag">Ansiedade Social</span>
+                                <span class="theme-tag">Autoestima</span>
+                            </div>
+                            <div class="movie-actions">
+                                <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                    <i class="fas fa-search" aria-hidden="true"></i>
+                                    Encontrar para Assistir
+                                </a>
+                                <button class="btn btn-outline" aria-label="Ver mais detalhes sobre Eighth Grade">
+                                    <i class="fas fa-info-circle" aria-hidden="true"></i>
+                                    Detalhes
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card" data-category="documentary">
+                        <div class="movie-poster">
+                            <img src="public/screen.jpeg" alt="Poster do documentário Screenagers" loading="lazy">
+                            <div class="movie-overlay">
+                                <div class="movie-rating">★★★★☆</div>
+                                <div class="movie-category">Documentário</div>
+                            </div>
+                        </div>
+                        <div class="movie-info">
+                            <h3 class="movie-title">Screenagers</h3>
+                            <div class="movie-meta">
+                                <span class="movie-year">2016</span>
+                                <span class="movie-duration">68 min</span>
+                                <span class="movie-age">Livre</span>
+                            </div>
+                            <p class="movie-synopsis">
+                                Documentário que explora como o tempo de tela afeta o desenvolvimento do cérebro adolescente. Oferece insights sobre dependência digital e estratégias para uso saudável da tecnologia.
+                            </p>
+                            <div class="movie-themes">
+                                <span class="theme-tag">Tempo de Tela</span>
+                                <span class="theme-tag">Desenvolvimento</span>
+                                <span class="theme-tag">Família</span>
+                            </div>
+                            <div class="movie-actions">
+                                <a href="https://www.screenagersmovie.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                    Site Oficial
+                                </a>
+                                <button class="btn btn-outline" aria-label="Ver mais detalhes sobre Screenagers">
+                                    <i class="fas fa-info-circle" aria-hidden="true"></i>
+                                    Detalhes
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card" data-category="drama teen">
+                        <div class="movie-poster">
+                            <img src="public/13_reasons.jpeg" alt="Poster do filme 13 Reasons Why" loading="lazy">
+                            <div class="movie-overlay">
+                                <div class="movie-rating">★★★☆☆</div>
+                                <div class="movie-category">Drama</div>
+                                <div class="content-warning">
+                                    <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+                                    Conteúdo Sensível
+                                </div>
+                            </div>
+                        </div>
+                        <div class="movie-info">
+                            <h3 class="movie-title">13 Reasons Why</h3>
+                            <div class="movie-meta">
+                                <span class="movie-year">2017-2020</span>
+                                <span class="movie-duration">Série</span>
+                                <span class="movie-age">18+</span>
+                            </div>
+                            <p class="movie-synopsis">
+                                <strong>⚠️ Aviso:</strong> Série que aborda suicídio entre adolescentes. Importante assistir com orientação e discutir temas sensíveis. Mostra impactos do cyberbullying e pressões sociais.
+                            </p>
+                            <div class="movie-themes">
+                                <span class="theme-tag">Bullying</span>
+                                <span class="theme-tag">Depressão</span>
+                                <span class="theme-tag">Suicídio</span>
+                            </div>
+                            <div class="movie-actions">
+                                <a href="https://www.netflix.com/br/title/80117470" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                                    <i class="fas fa-play" aria-hidden="true"></i>
+                                    Ver na Netflix
+                                </a>
+                                <a href="como-ajudar.html" class="btn btn-emergency">
+                                    <i class="fas fa-hands-helping" aria-hidden="true"></i>
+                                    Preciso de Ajuda
+                                </a>
+                            </div>
+                            <div class="warning-note">
+                                <p><strong>Nota importante:</strong> Este conteúdo pode ser gatilho para pessoas em vulnerabilidade. Recomenda-se assistir acompanhado e ter suporte disponível.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card" data-category="documentary social-media">
+                        <div class="movie-poster">
+                            <img src="public/uprising.jpeg" alt="Poster do documentário Privacy Uprising" loading="lazy">
+                            <div class="movie-overlay">
+                                <div class="movie-rating">★★★★☆</div>
+                                <div class="movie-category">Documentário</div>
+                            </div>
+                        </div>
+                        <div class="movie-info">
+                            <h3 class="movie-title">Privacy Uprising</h3>
+                            <div class="movie-meta">
+                                <span class="movie-year">2019</span>
+                                <span class="movie-duration">85 min</span>
+                                <span class="movie-age">12+</span>
+                            </div>
+                            <p class="movie-synopsis">
+                                Documentário sobre privacidade digital e como nossos dados são coletados e utilizados. Explora as consequências psicológicas da vigilância digital constante.
+                            </p>
+                            <div class="movie-themes">
+                                <span class="theme-tag">Privacidade</span>
+                                <span class="theme-tag">Dados Pessoais</span>
+                                <span class="theme-tag">Vigilância</span>
+                            </div>
+                            <div class="movie-actions">
+                                <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                    <i class="fas fa-search" aria-hidden="true"></i>
+                                    Buscar Online
+                                </a>
+                                <button class="btn btn-outline" aria-label="Ver mais detalhes sobre Privacy Uprising">
+                                    <i class="fas fa-info-circle" aria-hidden="true"></i>
+                                    Detalhes
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Placeholder para lista dinâmica -->
+                    <div class="movies-placeholder" style="grid-column: 1 / -1; text-align: center; padding: 3rem; background-color: var(--light-gray); border-radius: 1rem; border: 2px dashed #CBD5E0;">
+                        <i class="fas fa-film" style="font-size: 3rem; color: var(--text-light); margin-bottom: 1rem;" aria-hidden="true"></i>
+                        <h3>Mais filmes em breve!</h3>
+                        <p>Para adicionar novos filmes à lista:</p>
+                        <ol style="text-align: left; display: inline-block; margin: 1rem 0;">
+                            <li>Abra o arquivo <code>filmes.html</code></li>
+                            <li>Localize <code>{{FILMES_LIST}}</code></li>
+                            <li>Substitua pela sua lista de filmes</li>
+                            <li>Use a estrutura dos exemplos acima</li>
+                        </ol>
+                        <p><em>Lista atual: {{FILMES_LIST}}</em></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Educational Note -->
+            <section class="educational-note" role="region" aria-labelledby="note-title">
+                <div class="note-container">
+                    <h2 id="note-title">Importante: Consumo Consciente de Mídia</h2>
+                    <div class="note-content">
+                        <div class="note-icon">
+                            <i class="fas fa-lightbulb" aria-hidden="true"></i>
+                        </div>
+                        <div class="note-text">
+                            <p>Ao assistir filmes e documentários sobre saúde mental e redes sociais:</p>
+                            <ul>
+                                <li><strong>Contextualize:</strong> Lembre-se de que são representações fictícias ou pontos de vista específicos</li>
+                                <li><strong>Discuta:</strong> Converse com amigos, família ou professores sobre os temas apresentados</li>
+                                <li><strong>Reflita:</strong> Use as histórias como ponto de partida para reflexão sobre seus próprios hábitos</li>
+                                <li><strong>Busque ajuda:</strong> Se algum conteúdo despertar preocupações pessoais, procure orientação profissional</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Discussion Guide -->
+            <section class="discussion-guide" aria-labelledby="discussion-title">
+                <h2 id="discussion-title" class="section-title">Guia para Discussão</h2>
+                <div class="discussion-cards">
+                    <div class="discussion-card">
+                        <h3>Antes de Assistir</h3>
+                        <ul>
+                            <li>Que expectativas você tem sobre o filme?</li>
+                            <li>O que você já sabe sobre o tema abordado?</li>
+                            <li>Você se sente preparado para o conteúdo?</li>
+                        </ul>
+                    </div>
+                    <div class="discussion-card">
+                        <h3>Durante</h3>
+                        <ul>
+                            <li>Que cenas mais chamaram sua atenção?</li>
+                            <li>Você se identificou com algum personagem?</li>
+                            <li>Algo te surpreendeu ou incomodou?</li>
+                        </ul>
+                    </div>
+                    <div class="discussion-card">
+                        <h3>Depois</h3>
+                        <ul>
+                            <li>Como o filme mudou sua perspectiva?</li>
+                            <li>Que ações práticas você pode tomar?</li>
+                            <li>Você recomendaria para outras pessoas?</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sesiverso</h3>
+                    <p>Projeto de feira de ciências focado na saúde mental dos jovens na era digital.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Úteis</h4>
+                    <ul>
+                        <li><a href="como-ajudar.html">Como Procurar Ajuda</a></li>
+                        <li><a href="https://cvv.org.br/" target="_blank" rel="noopener noreferrer">CVV - Centro de Valorização da Vida</a></li>
+                        <li><a href="contato.html">Entre em Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Emergência</h4>
+                    <p><strong>CVV - 188</strong><br>
+                    Atendimento gratuito 24h</p>
+                    <a href="tel:188" class="btn btn-small">Ligar Agora</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sesiverso. Este projeto é educacional e sem fins lucrativos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+    <style>
+        /* Estilos específicos para a página de filmes */
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-turquoise) 100%);
+            color: var(--white);
+            padding: var(--spacing-2xl) 0;
+            text-align: center;
+        }
+
+        .filter-section {
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-md);
+            justify-content: center;
+        }
+
+        .filter-btn {
+            padding: var(--spacing-sm) var(--spacing-lg);
+            border: 2px solid var(--primary-blue);
+            background: transparent;
+            color: var(--primary-blue);
+            border-radius: var(--border-radius-lg);
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .movies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--spacing-xl);
+        }
+
+        .movie-card {
+            background: var(--white);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .movie-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .movie-poster {
+            position: relative;
+            aspect-ratio: 3/4;
+            overflow: hidden;
+        }
+
+        .movie-poster img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .movie-overlay {
+            position: absolute;
+            top: var(--spacing-md);
+            right: var(--spacing-md);
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-sm);
+            align-items: flex-end;
+        }
+
+        .movie-rating,
+        .movie-category {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--border-radius);
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .content-warning {
+            background: var(--error);
+            color: white;
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--border-radius);
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .movie-info {
+            padding: var(--spacing-lg);
+        }
+
+        .movie-title {
+            font-size: 1.25rem;
+            color: var(--primary-blue);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .movie-meta {
+            display: flex;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-md);
+            font-size: 0.875rem;
+            color: var(--text-light);
+        }
+
+        .movie-synopsis {
+            line-height: 1.6;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .movie-themes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .theme-tag {
+            background: var(--light-gray);
+            color: var(--text-dark);
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--border-radius);
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .movie-actions {
+            display: flex;
+            gap: var(--spacing-sm);
+            flex-wrap: wrap;
+        }
+
+        .warning-note {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid var(--error);
+            padding: var(--spacing-md);
+            border-radius: var(--border-radius);
+            margin-top: var(--spacing-lg);
+            font-size: 0.875rem;
+            color: var(--error);
+        }
+
+        .educational-note {
+            background: var(--light-gray);
+            padding: var(--spacing-2xl) 0;
+            margin: var(--spacing-3xl) 0;
+        }
+
+        .note-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .note-content {
+            display: flex;
+            gap: var(--spacing-lg);
+            align-items: flex-start;
+        }
+
+        .note-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--secondary-turquoise);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .note-text ul {
+            margin-left: var(--spacing-lg);
+        }
+
+        .discussion-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .discussion-card {
+            background: var(--white);
+            padding: var(--spacing-xl);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--secondary-turquoise);
+        }
+
+        .discussion-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .discussion-card ul {
+            margin-left: var(--spacing-lg);
+        }
+
+        @media (max-width: 768px) {
+            .movies-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .note-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .movie-actions {
+                flex-direction: column;
+            }
+
+            .movie-actions .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</body>
+</html>

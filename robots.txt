@@ -1,0 +1,32 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://SEU_DOMINIO.github.io/sitemap.xml
+
+# Páginas principais
+Allow: /index.html
+Allow: /artigo.html
+Allow: /video.html
+Allow: /filmes.html
+Allow: /reportagens.html
+Allow: /intervencoes.html
+Allow: /como-ajudar.html
+Allow: /galeria.html
+Allow: /contato.html
+
+# Recursos estáticos
+Allow: /css/
+Allow: /js/
+Allow: /assets/
+
+# Prioridades para SEO
+# Página principal - prioridade máxima
+# Artigo científico - alta prioridade
+# Recursos de ajuda - alta prioridade
+# Outras páginas - prioridade normal
+
+# Comentários para usuários
+# Este é um projeto educacional sobre saúde mental
+# Contém informações científicas e recursos de apoio
+# Inclui contatos de emergência (CVV 188)

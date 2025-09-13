@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportagens e Estudos - Saúde Mental e Redes Sociais | Sesiverso</title>
+    <meta name="description" content="Coletânea de reportagens, estudos científicos e artigos sobre o impacto das redes sociais e influenciadores na saúde mental dos jovens.">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Reportagens e Estudos - Saúde Mental e Redes Sociais">
+    <meta property="og:description" content="Coletânea de reportagens e estudos sobre o impacto das redes sociais na saúde mental dos jovens.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="assets/images/og-image.jpg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Emergency Help Button (Fixed) -->
+    <div id="emergency-help" class="emergency-help" role="region" aria-label="Ajuda de emergência">
+        <button id="emergency-btn" class="emergency-btn" aria-label="Preciso de ajuda agora - CVV 188">
+            <i class="fas fa-heart" aria-hidden="true"></i>
+            <span>Preciso de ajuda agora</span>
+        </button>
+        
+        <div id="emergency-modal" class="emergency-modal" role="dialog" aria-modal="true" aria-labelledby="emergency-title" style="display: none;">
+            <div class="emergency-content">
+                <h3 id="emergency-title">Se você está em risco ou em crise</h3>
+                <p>Se estiver em risco imediato, ligue já para o CVV — 188 (atendimento 24h, gratuito e anônimo) ou acesse o chat.</p>
+                <div class="emergency-actions">
+                    <a href="tel:188" class="btn btn-emergency" aria-label="Ligar para CVV - 188">
+                        <i class="fas fa-phone" aria-hidden="true"></i>
+                        Ligar para 188
+                    </a>
+                    <a href="https://cvv.org.br/" target="_blank" rel="noopener noreferrer" class="btn btn-emergency-secondary" aria-label="Ir para o chat do CVV - abre em nova aba">
+                        <i class="fas fa-comments" aria-hidden="true"></i>
+                        Chat do CVV
+                    </a>
+                </div>
+                <button id="close-emergency" class="close-btn" aria-label="Fechar janela de ajuda">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="nav" role="navigation" aria-label="Menu principal">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <h1>Sesiverso</h1>
+                    <span class="nav-subtitle">Feira de Ciências</span>
+                </div>
+                
+                <button class="nav-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
+                
+                <ul class="nav-menu" role="menubar">
+                    <li role="none"><a href="index.html" class="nav-link" role="menuitem">Início</a></li>
+                    <li role="none"><a href="artigo.html" class="nav-link" role="menuitem">Artigo</a></li>
+                    <li role="none"><a href="video.html" class="nav-link" role="menuitem">Vídeo</a></li>
+                    <li role="none"><a href="filmes.html" class="nav-link" role="menuitem">Filmes</a></li>
+                    <li role="none"><a href="reportagens.html" class="nav-link active" role="menuitem" aria-current="page">Reportagens</a></li>
+                    <li role="none"><a href="intervencoes.html" class="nav-link" role="menuitem">Intervenções</a></li>
+                    <li role="none"><a href="como-ajudar.html" class="nav-link" role="menuitem">Como Ajudar</a></li>
+                                        <li role="none"><a href="contato.html" class="nav-link" role="menuitem">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header" role="banner">
+        <div class="container">
+            <h1 class="page-title">Reportagens e Estudos</h1>
+            <p class="page-description">Fontes confiáveis de informação sobre saúde mental, redes sociais e o impacto dos influenciadores digitais</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content" role="main">
+        <div class="container">
+            
+            <!-- Filter Section -->
+            <section class="filter-section" aria-labelledby="filter-title">
+                <h2 id="filter-title" class="section-title">Filtros</h2>
+                <div class="filter-controls">
+                    <div class="filter-group">
+                        <label for="type-filter">Tipo:</label>
+                        <select id="type-filter" class="filter-select">
+                            <option value="all">Todos</option>
+                            <option value="scientific">Estudos Científicos</option>
+                            <option value="news">Reportagens</option>
+                            <option value="blog">Artigos de Blog</option>
+                            <option value="government">Órgãos Governamentais</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="date-filter">Período:</label>
+                        <select id="date-filter" class="filter-select">
+                            <option value="all">Todos os períodos</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="older">Anteriores</option>
+                        </select>
+                    </div>
+                    <div class="search-group">
+                        <label for="search-input">Buscar:</label>
+                        <input type="search" id="search-input" placeholder="Digite palavras-chave..." class="search-input">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Articles Grid -->
+            <section class="articles-section" aria-labelledby="articles-title">
+                <h2 id="articles-title" class="section-title">Bibliografia e Fontes</h2>
+                
+                <div class="articles-grid" id="articles-container">
+                    <!-- {{REPORTAGENS_LIST}} será substituído pela lista real -->
+                    
+                    <!-- Estudos Científicos -->
+                    <article class="article-card" data-type="scientific" data-year="2023">
+                        <div class="article-header">
+                            <div class="article-type">Estudo Científico</div>
+                            <div class="article-date">Março 2023</div>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">Social Media Use and Mental Health among Adolescents</h3>
+                            <div class="article-meta">
+                                <span class="article-source">Journal of Adolescent Health</span>
+                                <span class="article-authors">Dr. Sarah Johnson et al.</span>
+                            </div>
+                            <p class="article-summary">
+                                Estudo longitudinal com 1.500 adolescentes examina a relação entre uso de redes sociais e indicadores de saúde mental. Encontrou correlação significativa entre tempo de uso excessivo e sintomas depressivos.
+                            </p>
+                            <div class="article-topics">
+                                <span class="topic-tag">Adolescentes</span>
+                                <span class="topic-tag">Depressão</span>
+                                <span class="topic-tag">Instagram</span>
+                                <span class="topic-tag">TikTok</span>
+                            </div>
+                            <div class="article-actions">
+                                <a href="https://doi.org/10.1016/example" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                    Acessar Estudo
+                                </a>
+                                <button class="btn btn-outline" aria-label="Ver resumo expandido">
+                                    <i class="fas fa-expand" aria-hidden="true"></i>
+                                    Resumo
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card" data-type="news" data-year="2024">
+                        <div class="article-header">
+                            <div class="article-type">Reportagem</div>
+                            <div class="article-date">Janeiro 2024</div>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">Como os influenciadores estão afetando a saúde mental dos jovens brasileiros</h3>
+                            <div class="article-meta">
+                                <span class="article-source">Folha de S.Paulo</span>
+                                <span class="article-authors">Maria Silva</span>
+                            </div>
+                            <p class="article-summary">
+                                Reportagem especial investigando o impacto dos influenciadores digitais na autoestima e comportamento de jovens brasileiros. Inclui depoimentos de especialistas e dados de pesquisa nacional.
+                            </p>
+                            <div class="article-topics">
+                                <span class="topic-tag">Brasil</span>
+                                <span class="topic-tag">Influenciadores</span>
+                                <span class="topic-tag">Autoestima</span>
+                                <span class="topic-tag">Jovens</span>
+                            </div>
+                            <div class="article-actions">
+                                <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                    <i class="fas fa-newspaper" aria-hidden="true"></i>
+                                    Ler Reportagem
+                                </a>
+                                <button class="btn btn-outline" aria-label="Ver resumo expandido">
+                                    <i class="fas fa-expand" aria-hidden="true"></i>
+                                    Resumo
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card" data-type="government" data-year="2023">
+                        <div class="article-header">
+                            <div class="article-type">Documento Oficial</div>
+                            <div class="article-date">Setembro 2023</div>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">Diretrizes para Uso Seguro de Redes Sociais por Menores</h3>
+                            <div class="article-meta">
+                                <span class="article-source">Ministério da Saúde</span>
+                                <span class="article-authors">Secretaria de Vigilância em Saúde</span>
+                            </div>
+                            <p class="article-summary">
+                                Documento oficial com recomendações para pais, educadores e jovens sobre o uso seguro e consciente das redes sociais. Baseado em evidências científicas nacionais e internacionais.
+                            </p>
+                            <div class="article-topics">
+                                <span class="topic-tag">Política Pública</span>
+                                <span class="topic-tag">Prevenção</span>
+                                <span class="topic-tag">Educação</span>
+                                <span class="topic-tag">Família</span>
+                            </div>
+                            <div class="article-actions">
+                                <a href="https://www.gov.br/saude" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                                    <i class="fas fa-download" aria-hidden="true"></i>
+                                    Baixar PDF
+                                </a>
+                                <button class="btn btn-outline" aria-label="Ver resumo expandido">
+                                    <i class="fas fa-expand" aria-hidden="true"></i>
+                                    Resumo
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card" data-type="scientific" data-year="2022">
+                        <div class="article-header">
+                            <div class="article-type">Meta-análise</div>
+                            <div class="article-date">Dezembro 2022</div>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">The Impact of Social Media Influencers on Body Image and Self-Esteem</h3>
+                            <div class="article-meta">
+                                <span class="article-source">Psychological Science</span>
+                                <span class="article-authors">Dr. Emma Thompson et al.</span>
+                            </div>
+                            <p class="article-summary">
+                                Meta-análise de 47 estudos examina como influenciadores digitais afetam a percepção corporal e autoestima. Identifica fatores de risco e proteção em diferentes grupos demográficos.
+                            </p>
+                            <div class="article-topics">
+                                <span class="topic-tag">Imagem Corporal</span>
+                                <span class="topic-tag">Meta-análise</span>
+                                <span class="topic-tag">Gênero</span>
+                                <span class="topic-tag">Prevenção</span>
+                            </div>
+                            <div class="article-actions">
+                                <a href="https://doi.org/10.1177/example" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                    Acessar Estudo
+                                </a>
+                                <button class="btn btn-outline" aria-label="Ver resumo expandido">
+                                    <i class="fas fa-expand" aria-hidden="true"></i>
+                                    Resumo
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card" data-type="blog" data-year="2024">
+                        <div class="article-header">
+                            <div class="article-type">Artigo Especializado</div>
+                            <div class="article-date">Fevereiro 2024</div>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">Sinais de Alerta: Quando as Redes Sociais se Tornam Prejudiciais</h3>
+                            <div class="article-meta">
+                                <span class="article-source">Instituto de Psicologia Digital</span>
+                                <span class="article-authors">Dra. Ana Costa</span>
+                            </div>
+                            <p class="article-summary">
+                                Artigo prático para pais e educadores identificarem quando o uso de redes sociais está impactando negativamente a saúde mental de jovens. Inclui lista de verificação e estratégias de intervenção.
+                            </p>
+                            <div class="article-topics">
+                                <span class="topic-tag">Sinais de Alerta</span>
+                                <span class="topic-tag">Pais</span>
+                                <span class="topic-tag">Educadores</span>
+                                <span class="topic-tag">Intervenção</span>
+                            </div>
+                            <div class="article-actions">
+                                <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                    <i class="fas fa-book-open" aria-hidden="true"></i>
+                                    Ler Artigo
+                                </a>
+                                <button class="btn btn-outline" aria-label="Ver resumo expandido">
+                                    <i class="fas fa-expand" aria-hidden="true"></i>
+                                    Resumo
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Placeholder para lista dinâmica -->
+                    <div class="articles-placeholder" style="grid-column: 1 / -1; text-align: center; padding: 3rem; background-color: var(--light-gray); border-radius: 1rem; border: 2px dashed #CBD5E0; margin-top: 2rem;">
+                        <i class="fas fa-newspaper" style="font-size: 3rem; color: var(--text-light); margin-bottom: 1rem;" aria-hidden="true"></i>
+                        <h3>Mais conteúdo em breve!</h3>
+                        <p>Para adicionar novas reportagens e estudos:</p>
+                        <ol style="text-align: left; display: inline-block; margin: 1rem 0;">
+                            <li>Abra o arquivo <code>reportagens.html</code></li>
+                            <li>Localize <code>{{REPORTAGENS_LIST}}</code></li>
+                            <li>Substitua pela sua lista de fontes</li>
+                            <li>Use a estrutura dos exemplos acima</li>
+                        </ol>
+                        <p><em>Lista atual: {{REPORTAGENS_LIST}}</em></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Research Tips -->
+            <section class="research-tips" role="region" aria-labelledby="tips-title">
+                <h2 id="tips-title" class="section-title">Como Avaliar Fontes de Informação</h2>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-check-circle" aria-hidden="true"></i>
+                        </div>
+                        <h3>Verifique a Fonte</h3>
+                        <ul>
+                            <li>Autor tem credenciais na área?</li>
+                            <li>Publicação é reconhecida?</li>
+                            <li>Há revisão por pares?</li>
+                            <li>Data de publicação é recente?</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-balance-scale" aria-hidden="true"></i>
+                        </div>
+                        <h3>Analise o Conteúdo</h3>
+                        <ul>
+                            <li>Apresenta evidências?</li>
+                            <li>Cita outras pesquisas?</li>
+                            <li>É imparcial ou tendencioso?</li>
+                            <li>Diferencia fatos de opiniões?</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-users" aria-hidden="true"></i>
+                        </div>
+                        <h3>Compare Fontes</h3>
+                        <ul>
+                            <li>Busque múltiplas perspectivas</li>
+                            <li>Verifique se outros estudos confirmam</li>
+                            <li>Considere o tamanho da amostra</li>
+                            <li>Avalie a metodologia utilizada</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+                        </div>
+                        <h3>Cuidado com</h3>
+                        <ul>
+                            <li>Promessas de "cura milagrosa"</li>
+                            <li>Linguagem sensacionalista</li>
+                            <li>Ausência de referências</li>
+                            <li>Conflitos de interesse não declarados</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recommended Sources -->
+            <section class="recommended-sources" aria-labelledby="sources-title">
+                <h2 id="sources-title" class="section-title">Fontes Confiáveis Recomendadas</h2>
+                <div class="sources-grid">
+                    <div class="source-category">
+                        <h3>Organizações de Saúde</h3>
+                        <ul>
+                            <li><a href="https://www.who.int/" target="_blank" rel="noopener noreferrer">Organização Mundial da Saúde (OMS)</a></li>
+                            <li><a href="https://www.gov.br/saude" target="_blank" rel="noopener noreferrer">Ministério da Saúde do Brasil</a></li>
+                            <li><a href="https://cvv.org.br/" target="_blank" rel="noopener noreferrer">Centro de Valorização da Vida (CVV)</a></li>
+                            <li><a href="https://www.crpsp.org.br/" target="_blank" rel="noopener noreferrer">Conselho Regional de Psicologia</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="source-category">
+                        <h3>Periódicos Científicos</h3>
+                        <ul>
+                            <li>Journal of Adolescent Health</li>
+                            <li>Cyberpsychology, Behavior, and Social Networking</li>
+                            <li>Computers in Human Behavior</li>
+                            <li>Revista Brasileira de Psiquiatria</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="source-category">
+                        <h3>Instituições de Pesquisa</h3>
+                        <ul>
+                            <li>Pew Research Center</li>
+                            <li>CETIC.br (Centro de Estudos sobre TIC)</li>
+                            <li>Instituto Brasileiro de Geografia e Estatística (IBGE)</li>
+                            <li>Common Sense Media</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="source-category">
+                        <h3>Bases de Dados</h3>
+                        <ul>
+                            <li>PubMed / MEDLINE</li>
+                            <li>Google Scholar</li>
+                            <li>SciELO</li>
+                            <li>PsycINFO</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sesiverso</h3>
+                    <p>Projeto de feira de ciências focado na saúde mental dos jovens na era digital.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Úteis</h4>
+                    <ul>
+                        <li><a href="como-ajudar.html">Como Procurar Ajuda</a></li>
+                        <li><a href="https://cvv.org.br/" target="_blank" rel="noopener noreferrer">CVV - Centro de Valorização da Vida</a></li>
+                        <li><a href="contato.html">Entre em Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Emergência</h4>
+                    <p><strong>CVV - 188</strong><br>
+                    Atendimento gratuito 24h</p>
+                    <a href="tel:188" class="btn btn-small">Ligar Agora</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sesiverso. Este projeto é educacional e sem fins lucrativos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+    <style>
+        /* Estilos específicos para a página de reportagens */
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-turquoise) 100%);
+            color: var(--white);
+            padding: var(--spacing-2xl) 0;
+            text-align: center;
+        }
+
+        .filter-section {
+            margin-bottom: var(--spacing-2xl);
+            background: var(--light-gray);
+            padding: var(--spacing-xl);
+            border-radius: var(--border-radius-lg);
+        }
+
+        .filter-controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-lg);
+            align-items: end;
+        }
+
+        .filter-group,
+        .search-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .filter-group label,
+        .search-group label {
+            margin-bottom: var(--spacing-sm);
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .filter-select,
+        .search-input {
+            padding: var(--spacing-sm) var(--spacing-md);
+            border: 2px solid #E5E7EB;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .filter-select:focus,
+        .search-input:focus {
+            outline: none;
+            border-color: var(--secondary-turquoise);
+            box-shadow: 0 0 0 3px rgba(57, 160, 166, 0.1);
+        }
+
+        .articles-grid {
+            display: grid;
+            gap: var(--spacing-xl);
+        }
+
+        .article-card {
+            background: var(--white);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .article-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .article-header {
+            background: var(--light-gray);
+            padding: var(--spacing-md) var(--spacing-lg);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .article-type {
+            background: var(--primary-blue);
+            color: white;
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--border-radius);
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .article-date {
+            color: var(--text-light);
+            font-size: 0.875rem;
+        }
+
+        .article-content {
+            padding: var(--spacing-lg);
+        }
+
+        .article-title {
+            color: var(--primary-blue);
+            margin-bottom: var(--spacing-md);
+            line-height: 1.3;
+        }
+
+        .article-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+            font-size: 0.875rem;
+            color: var(--text-light);
+        }
+
+        .article-source {
+            font-weight: 500;
+            color: var(--secondary-turquoise);
+        }
+
+        .article-summary {
+            line-height: 1.6;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .article-topics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .topic-tag {
+            background: var(--light-gray);
+            color: var(--text-dark);
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--border-radius);
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .article-actions {
+            display: flex;
+            gap: var(--spacing-sm);
+            flex-wrap: wrap;
+        }
+
+        .research-tips {
+            background: var(--light-gray);
+            padding: var(--spacing-2xl) 0;
+            margin: var(--spacing-3xl) 0;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .tip-card {
+            background: var(--white);
+            padding: var(--spacing-xl);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow);
+        }
+
+        .tip-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--secondary-turquoise);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.25rem;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .tip-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .tip-card ul {
+            margin-left: var(--spacing-lg);
+        }
+
+        .sources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-xl);
+        }
+
+        .source-category {
+            background: var(--white);
+            padding: var(--spacing-xl);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow);
+        }
+
+        .source-category h3 {
+            color: var(--primary-blue);
+            margin-bottom: var(--spacing-lg);
+            border-bottom: 2px solid var(--light-gray);
+            padding-bottom: var(--spacing-sm);
+        }
+
+        .source-category ul {
+            list-style: none;
+        }
+
+        .source-category li {
+            padding: var(--spacing-sm) 0;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .source-category li:last-child {
+            border-bottom: none;
+        }
+
+        .source-category a {
+            color: var(--text-dark);
+            transition: var(--transition);
+        }
+
+        .source-category a:hover {
+            color: var(--secondary-turquoise);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .filter-controls {
+                grid-template-columns: 1fr;
+            }
+
+            .article-header {
+                flex-direction: column;
+                gap: var(--spacing-sm);
+                text-align: center;
+            }
+
+            .article-actions {
+                flex-direction: column;
+            }
+
+            .article-actions .btn {
+                width: 100%;
+            }
+
+            .tips-grid,
+            .sources-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Hidden class for filtering */
+        .article-card.hidden {
+            display: none;
+        }
+    </style>
+
+    <script>
+        // Filtros funcionais para a página de reportagens
+        document.addEventListener('DOMContentLoaded', function() {
+            const typeFilter = document.getElementById('type-filter');
+            const dateFilter = document.getElementById('date-filter');
+            const searchInput = document.getElementById('search-input');
+            const articleCards = document.querySelectorAll('.article-card');
+
+            function filterArticles() {
+                const selectedType = typeFilter.value;
+                const selectedDate = dateFilter.value;
+                const searchTerm = searchInput.value.toLowerCase();
+
+                articleCards.forEach(card => {
+                    const cardType = card.dataset.type;
+                    const cardYear = card.dataset.year;
+                    const cardText = card.textContent.toLowerCase();
+
+                    let showCard = true;
+
+                    // Filtro por tipo
+                    if (selectedType !== 'all' && cardType !== selectedType) {
+                        showCard = false;
+                    }
+
+                    // Filtro por data
+                    if (selectedDate !== 'all') {
+                        if (selectedDate === 'older' && parseInt(cardYear) >= 2022) {
+                            showCard = false;
+                        } else if (selectedDate !== 'older' && cardYear !== selectedDate) {
+                            showCard = false;
+                        }
+                    }
+
+                    // Filtro por busca
+                    if (searchTerm && !cardText.includes(searchTerm)) {
+                        showCard = false;
+                    }
+
+                    card.classList.toggle('hidden', !showCard);
+                });
+
+                // Mostrar mensagem se nenhum resultado
+                const visibleCards = document.querySelectorAll('.article-card:not(.hidden)');
+                let noResultsMsg = document.getElementById('no-results');
+                
+                if (visibleCards.length === 0 && !noResultsMsg) {
+                    noResultsMsg = document.createElement('div');
+                    noResultsMsg.id = 'no-results';
+                    noResultsMsg.className = 'no-results-message';
+                    noResultsMsg.innerHTML = `
+                        <div style="text-align: center; padding: 3rem; background: var(--light-gray); border-radius: 1rem; margin: 2rem 0;">
+                            <i class="fas fa-search" style="font-size: 3rem; color: var(--text-light); margin-bottom: 1rem;"></i>
+                            <h3>Nenhum resultado encontrado</h3>
+                            <p>Tente ajustar os filtros ou termos de busca.</p>
+                        </div>
+                    `;
+                    document.getElementById('articles-container').appendChild(noResultsMsg);
+                } else if (visibleCards.length > 0 && noResultsMsg) {
+                    noResultsMsg.remove();
+                }
+            }
+
+            // Event listeners
+            typeFilter.addEventListener('change', filterArticles);
+            dateFilter.addEventListener('change', filterArticles);
+            
+            let searchTimeout;
+            searchInput.addEventListener('input', function() {
+                clearTimeout(searchTimeout);
+                searchTimeout = setTimeout(filterArticles, 300);
+            });
+        });
+    </script>
+</body>
+</html>

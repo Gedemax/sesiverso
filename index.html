@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesiverso - O Impacto dos Influenciadores na Saúde Mental dos Jovens</title>
+    <meta name="description" content="Projeto de feira de ciências sobre como os influenciadores digitais afetam a saúde mental dos jovens. Recursos, pesquisas e ajuda especializada.">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Sesiverso - O Impacto dos Influenciadores na Saúde Mental dos Jovens">
+    <meta property="og:description" content="Projeto de feira de ciências sobre como os influenciadores digitais afetam a saúde mental dos jovens. Recursos, pesquisas e ajuda especializada.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="assets/images/og-image.jpg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Emergency Help Button (Fixed) -->
+    <div id="emergency-help" class="emergency-help" role="region" aria-label="Ajuda de emergência">
+        <button id="emergency-btn" class="emergency-btn" aria-label="Preciso de ajuda agora - CVV 188">
+            <i class="fas fa-heart" aria-hidden="true"></i>
+            <span>Preciso de ajuda agora</span>
+        </button>
+        
+        <div id="emergency-modal" class="emergency-modal" role="dialog" aria-modal="true" aria-labelledby="emergency-title" style="display: none;">
+            <div class="emergency-content">
+                <h3 id="emergency-title">Se você está em risco ou em crise</h3>
+                <p>Se estiver em risco imediato, ligue já para o CVV — 188 (atendimento 24h, gratuito e anônimo) ou acesse o chat.</p>
+                <div class="emergency-actions">
+                    <a href="tel:188" class="btn btn-emergency" aria-label="Ligar para CVV - 188">
+                        <i class="fas fa-phone" aria-hidden="true"></i>
+                        Ligar para 188
+                    </a>
+                    <a href="https://cvv.org.br/" target="_blank" rel="noopener noreferrer" class="btn btn-emergency-secondary" aria-label="Ir para o chat do CVV - abre em nova aba">
+                        <i class="fas fa-comments" aria-hidden="true"></i>
+                        Chat do CVV
+                    </a>
+                </div>
+                <button id="close-emergency" class="close-btn" aria-label="Fechar janela de ajuda">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="nav" role="navigation" aria-label="Menu principal">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <h1>Sesiverso</h1>
+                    <span class="nav-subtitle">Feira de Ciências</span>
+                </div>
+                
+                <button class="nav-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
+                
+                <ul class="nav-menu" role="menubar">
+                    <li role="none"><a href="index.html" class="nav-link active" role="menuitem" aria-current="page">Início</a></li>
+                    <li role="none"><a href="artigo.html" class="nav-link" role="menuitem">Artigo</a></li>
+                    <li role="none"><a href="video.html" class="nav-link" role="menuitem">Vídeo</a></li>
+                    <li role="none"><a href="filmes.html" class="nav-link" role="menuitem">Filmes</a></li>
+                    <li role="none"><a href="reportagens.html" class="nav-link" role="menuitem">Reportagens</a></li>
+                    <li role="none"><a href="intervencoes.html" class="nav-link" role="menuitem">Intervenções</a></li>
+                    <li role="none"><a href="como-ajudar.html" class="nav-link" role="menuitem">Como Ajudar</a></li>
+                                        <li role="none"><a href="contato.html" class="nav-link" role="menuitem">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" role="main">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">O Impacto dos Influenciadores na Saúde Mental dos Jovens</h1>
+                <p class="hero-description">
+                    Uma pesquisa aprofundada sobre como os influenciadores digitais afetam o bem-estar psicológico dos adolescentes e jovens adultos na era das redes sociais.
+                </p>
+                <div class="hero-actions">
+                    <a href="video.html" class="btn btn-primary">
+                        <i class="fas fa-play" aria-hidden="true"></i>
+                        Ver Vídeo
+                    </a>
+                    <a href="artigo.html" class="btn btn-secondary">
+                        <i class="fas fa-book-open" aria-hidden="true"></i>
+                        Ler Artigo
+                    </a>
+                    <a href="como-ajudar.html" class="btn btn-outline">
+                        <i class="fas fa-hands-helping" aria-hidden="true"></i>
+                        Procurar Ajuda
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <img src="public/jovens_interagindo.png" alt="Ilustração representando jovens interagindo com dispositivos móveis e redes sociais" class="hero-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="overview" role="region" aria-labelledby="overview-title">
+        <div class="container">
+            <h2 id="overview-title" class="section-title">Sobre o Projeto</h2>
+            <div class="overview-grid">
+                <div class="overview-card">
+                    <div class="card-icon">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </div>
+                    <h3>Pesquisa</h3>
+                    <p>Análise científica dos efeitos dos influenciadores digitais na autoestima, ansiedade e comportamento dos jovens.</p>
+                </div>
+                <div class="overview-card">
+                    <div class="card-icon">
+                        <i class="fas fa-users" aria-hidden="true"></i>
+                    </div>
+                    <h3>Impacto Social</h3>
+                    <p>Compreendendo como o conteúdo digital influencia a formação da identidade e relações sociais dos adolescentes.</p>
+                </div>
+                <div class="overview-card">
+                    <div class="card-icon">
+                        <i class="fas fa-lightbulb" aria-hidden="true"></i>
+                    </div>
+                    <h3>Soluções</h3>
+                    <p>Propostas práticas para educação digital, uso consciente das redes sociais e suporte à saúde mental.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Findings -->
+    <section class="findings" role="region" aria-labelledby="findings-title">
+        <div class="container">
+            <h2 id="findings-title" class="section-title">Principais Descobertas</h2>
+            <div class="findings-content">
+                <div class="finding-item">
+                    <div class="finding-stat">78%</div>
+                    <div class="finding-text">
+                        <h3>Comparação Social</h3>
+                        <p>dos jovens relatam sentir ansiedade ao comparar suas vidas com influenciadores</p>
+                    </div>
+                </div>
+                <div class="finding-item">
+                    <div class="finding-stat">65%</div>
+                    <div class="finding-text">
+                        <h3>Pressão Estética</h3>
+                        <p>sentem pressão para atingir padrões de beleza promovidos nas redes sociais</p>
+                    </div>
+                </div>
+                <div class="finding-item">
+                    <div class="finding-stat">4.2h</div>
+                    <div class="finding-text">
+                        <h3>Tempo Diário</h3>
+                        <p>é o tempo médio que jovens passam consumindo conteúdo de influenciadores</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources -->
+    <section class="resources" role="region" aria-labelledby="resources-title">
+        <div class="container">
+            <h2 id="resources-title" class="section-title">Recursos e Materiais</h2>
+            <div class="resources-grid">
+                <a href="artigo.html" class="resource-card" aria-label="Ler artigo científico completo">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-alt" aria-hidden="true"></i>
+                    </div>
+                    <h3>Artigo Científico</h3>
+                    <p>Leia nossa pesquisa completa com metodologia, resultados e conclusões detalhadas.</p>
+                    <span class="resource-cta">Ler agora <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                </a>
+                
+                <a href="video.html" class="resource-card" aria-label="Assistir apresentação em vídeo">
+                    <div class="resource-icon">
+                        <i class="fas fa-video" aria-hidden="true"></i>
+                    </div>
+                    <h3>Apresentação em Vídeo</h3>
+                    <p>Assista à nossa apresentação completa com depoimentos e análises visuais.</p>
+                    <span class="resource-cta">Assistir <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                </a>
+                
+                <a href="filmes.html" class="resource-card" aria-label="Ver lista de filmes e documentários">
+                    <div class="resource-icon">
+                        <i class="fas fa-film" aria-hidden="true"></i>
+                    </div>
+                    <h3>Filmes e Documentários</h3>
+                    <p>Lista curada de filmes que abordam saúde mental e redes sociais.</p>
+                    <span class="resource-cta">Explorar <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                </a>
+                
+                <a href="intervencoes.html" class="resource-card" aria-label="Ver propostas de intervenção">
+                    <div class="resource-icon">
+                        <i class="fas fa-hands-helping" aria-hidden="true"></i>
+                    </div>
+                    <h3>Intervenções Escolares</h3>
+                    <p>Propostas práticas para implementar na sua escola ou comunidade.</p>
+                    <span class="resource-cta">Conhecer <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section class="team" role="region" aria-labelledby="team-title">
+        <div class="container">
+            <h2 id="team-title" class="section-title">Equipe do Projeto</h2>
+            <div class="team-grid" id="team-list">
+                <!-- {{EQUIPE}} - Será substituído pela lista da equipe -->
+                <div class="team-member team-member--alunos">
+    <div class="member-avatar">
+        <i class="fas fa-user" aria-hidden="true"></i>
+    </div>
+    <h3>Integrantes</h3>
+    <ul class="team-list">
+        <li>Anna Victoria</li>
+        <li>Ana Julia</li>
+        <li>Carla Caroline</li>
+        <li>Filipe Lacerda</li>
+        <li>Gabrielly Ferreira</li>
+        <li>Isabella Carolina</li>
+        <li>Laura Oliveira</li>
+        <li>Maria Julia</li>
+    </ul>
+</div>
+                <div class="team-member team-member--orientador">
+    <div class="member-avatar">
+        <i class="fas fa-user" aria-hidden="true"></i>
+    </div>
+    <h3>Prof. MSc. Jaqueline Dall Agnol</h3>
+    <p>Orientadora</p>
+</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sesiverso</h3>
+                    <p>Projeto de feira de ciências focado na saúde mental dos jovens na era digital.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Úteis</h4>
+                    <ul>
+                        <li><a href="como-ajudar.html">Como Procurar Ajuda</a></li>
+                        <li><a href="https://cvv.org.br/" target="_blank" rel="noopener noreferrer">CVV - Centro de Valorização da Vida</a></li>
+                        <li><a href="contato.html">Entre em Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Emergência</h4>
+                    <p><strong>CVV - 188</strong><br>
+                    Atendimento gratuito 24h</p>
+                    <a href="tel:188" class="btn btn-small">Ligar Agora</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sesiverso. Este projeto é educacional e sem fins lucrativos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como Procurar Ajuda - Recursos de Saúde Mental | Sesiverso</title>
+    <meta name="description" content="Encontre ajuda para questões de saúde mental. Contatos de emergência, recursos escolares e orientações passo a passo para buscar apoio profissional.">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Como Procurar Ajuda - Recursos de Saúde Mental">
+    <meta property="og:description" content="Encontre ajuda para questões de saúde mental. Contatos de emergência, recursos escolares e orientações passo a passo.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="assets/images/og-image.jpg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Emergency Help Button (Fixed) -->
+    <div id="emergency-help" class="emergency-help" role="region" aria-label="Ajuda de emergência">
+        <button id="emergency-btn" class="emergency-btn" aria-label="Preciso de ajuda agora - CVV 188">
+            <i class="fas fa-heart" aria-hidden="true"></i>
+            <span>Preciso de ajuda agora</span>
+        </button>
+        
+        <div id="emergency-modal" class="emergency-modal" role="dialog" aria-modal="true" aria-labelledby="emergency-title" style="display: none;">
+            <div class="emergency-content">
+                <h3 id="emergency-title">Se você está em risco ou em crise</h3>
+                <p>Se estiver em risco imediato, ligue já para o CVV — 188 (atendimento 24h, gratuito e anônimo) ou acesse o chat.</p>
+                <div class="emergency-actions">
+                    <a href="tel:188" class="btn btn-emergency" aria-label="Ligar para CVV - 188">
+                        <i class="fas fa-phone" aria-hidden="true"></i>
+                        Ligar para 188
+                    </a>
+                    <a href="https://cvv.org.br/" target="_blank" rel="noopener noreferrer" class="btn btn-emergency-secondary" aria-label="Ir para o chat do CVV - abre em nova aba">
+                        <i class="fas fa-comments" aria-hidden="true"></i>
+                        Chat do CVV
+                    </a>
+                </div>
+                <button id="close-emergency" class="close-btn" aria-label="Fechar janela de ajuda">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="nav" role="navigation" aria-label="Menu principal">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <h1>Sesiverso</h1>
+                    <span class="nav-subtitle">Feira de Ciências</span>
+                </div>
+                
+                <button class="nav-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
+                
+                <ul class="nav-menu" role="menubar">
+                    <li role="none"><a href="index.html" class="nav-link" role="menuitem">Início</a></li>
+                    <li role="none"><a href="artigo.html" class="nav-link" role="menuitem">Artigo</a></li>
+                    <li role="none"><a href="video.html" class="nav-link" role="menuitem">Vídeo</a></li>
+                    <li role="none"><a href="filmes.html" class="nav-link" role="menuitem">Filmes</a></li>
+                    <li role="none"><a href="reportagens.html" class="nav-link" role="menuitem">Reportagens</a></li>
+                    <li role="none"><a href="intervencoes.html" class="nav-link" role="menuitem">Intervenções</a></li>
+                    <li role="none"><a href="como-ajudar.html" class="nav-link active" role="menuitem" aria-current="page">Como Ajudar</a></li>
+                                        <li role="none"><a href="contato.html" class="nav-link" role="menuitem">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Help Header -->
+    <section class="help-header" role="banner">
+        <div class="container">
+            <h1 class="page-title">Como Procurar Ajuda</h1>
+            <p class="page-description">Recursos, contatos e orientações para cuidar da sua saúde mental</p>
+            
+            <!-- Crisis Alert -->
+            <div class="crisis-alert" role="alert">
+                <div class="alert-icon">
+                    <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+                </div>
+                <div class="alert-content">
+                    <h2>Em situação de emergência?</h2>
+                    <p>Se você está em risco imediato ou pensando em se machucar, procure ajuda agora mesmo.</p>
+                    <div class="crisis-actions">
+                        <a href="tel:188" class="btn btn-emergency">
+                            <i class="fas fa-phone" aria-hidden="true"></i>
+                            Ligar CVV - 188
+                        </a>
+                        <a href="tel:190" class="btn btn-emergency">
+                            <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                            Polícia - 190
+                        </a>
+                        <a href="tel:192" class="btn btn-emergency">
+                            <i class="fas fa-ambulance" aria-hidden="true"></i>
+                            SAMU - 192
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Help Content -->
+    <main class="help-content" role="main">
+        <div class="container">
+            
+            <!-- Step by Step Guide -->
+            <section class="steps-section" aria-labelledby="steps-title">
+                <h2 id="steps-title" class="section-title">Como Buscar Ajuda: Passo a Passo</h2>
+                
+                <div class="steps-container">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Reconheça os Sinais</h3>
+                            <p>Preste atenção em mudanças no seu humor, sono, apetite ou comportamento. Sentimentos de tristeza profunda, ansiedade constante ou pensamentos de autolesão são sinais importantes.</p>
+                            <ul>
+                                <li>Tristeza persistente por mais de duas semanas</li>
+                                <li>Perda de interesse em atividades que antes gostava</li>
+                                <li>Mudanças no sono ou apetite</li>
+                                <li>Dificuldade de concentração</li>
+                                <li>Pensamentos de morte ou autolesão</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Converse com Alguém de Confiança</h3>
+                            <p>Compartilhe seus sentimentos com uma pessoa em quem confia: um amigo próximo, familiar, professor ou conselheiro escolar.</p>
+                            <div class="tip-box">
+                                <strong>Dica:</strong> Escolha um momento e local apropriados. Seja honesto sobre como está se sentindo.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Procure Ajuda Profissional</h3>
+                            <p>Profissionais de saúde mental são treinados para ajudar. Não tenha vergonha de buscar apoio especializado.</p>
+                            <ul>
+                                <li>Psicólogos e psiquiatras</li>
+                                <li>Serviços de saúde mental da escola</li>
+                                <li>Unidades Básicas de Saúde (UBS)</li>
+                                <li>CAPS (Centros de Atenção Psicossocial)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Mantenha o Tratamento</h3>
+                            <p>A recuperação leva tempo. Seja paciente consigo mesmo e siga as orientações profissionais.</p>
+                            <div class="tip-box">
+                                <strong>Importante:</strong> Não pare o tratamento ou medicação sem orientação profissional.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Emergency Contacts -->
+            <section class="contacts-section" aria-labelledby="contacts-title">
+                <h2 id="contacts-title" class="section-title">Contatos de Emergência</h2>
+                
+                <div class="contacts-grid">
+                    <div class="contact-card primary-contact">
+                        <div class="contact-icon">
+                            <i class="fas fa-heart" aria-hidden="true"></i>
+                        </div>
+                        <h3>CVV - Centro de Valorização da Vida</h3>
+                        <div class="contact-info">
+                            <p class="contact-number">188</p>
+                            <p>Atendimento 24h, gratuito e anônimo</p>
+                            <p>Prevenção do suicídio e apoio emocional</p>
+                        </div>
+                        <div class="contact-actions">
+                            <a href="tel:188" class="btn btn-emergency">
+                                <i class="fas fa-phone" aria-hidden="true"></i>
+                                Ligar Agora
+                            </a>
+                            <a href="https://cvv.org.br/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                                <i class="fas fa-comments" aria-hidden="true"></i>
+                                Chat Online
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                        </div>
+                        <h3>Polícia Militar</h3>
+                        <div class="contact-info">
+                            <p class="contact-number">190</p>
+                            <p>Emergências e situações de risco</p>
+                        </div>
+                        <div class="contact-actions">
+                            <a href="tel:190" class="btn btn-outline">
+                                <i class="fas fa-phone" aria-hidden="true"></i>
+                                Ligar
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-ambulance" aria-hidden="true"></i>
+                        </div>
+                        <h3>SAMU</h3>
+                        <div class="contact-info">
+                            <p class="contact-number">192</p>
+                            <p>Emergências médicas</p>
+                        </div>
+                        <div class="contact-actions">
+                            <a href="tel:192" class="btn btn-outline">
+                                <i class="fas fa-phone" aria-hidden="true"></i>
+                                Ligar
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-child" aria-hidden="true"></i>
+                        </div>
+                        <h3>Disque 100</h3>
+                        <div class="contact-info">
+                            <p class="contact-number">100</p>
+                            <p>Disque Direitos Humanos</p>
+                            <p>Violações de direitos</p>
+                        </div>
+                        <div class="contact-actions">
+                            <a href="tel:100" class="btn btn-outline">
+                                <i class="fas fa-phone" aria-hidden="true"></i>
+                                Ligar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- School Resources -->
+            <section class="school-resources" aria-labelledby="school-title">
+                <h2 id="school-title" class="section-title">Recursos na Escola</h2>
+                
+                <div class="resources-list">
+                    <div class="resource-item">
+                        <div class="resource-icon">
+                            <i class="fas fa-user-md" aria-hidden="true"></i>
+                        </div>
+                        <div class="resource-content">
+                            <h3>Psicólogo Escolar</h3>
+                            <p>Muitas escolas têm psicólogos disponíveis para conversas individuais ou em grupo. Procure a coordenação ou secretaria para agendar uma conversa.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-item">
+                        <div class="resource-icon">
+                            <i class="fas fa-chalkboard-teacher" aria-hidden="true"></i>
+                        </div>
+                        <div class="resource-content">
+                            <h3>Professor de Confiança</h3>
+                            <p>Identifique um professor com quem você se sinta confortável para conversar. Eles podem orientá-lo aos recursos adequados.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-item">
+                        <div class="resource-icon">
+                            <i class="fas fa-users" aria-hidden="true"></i>
+                        </div>
+                        <div class="resource-content">
+                            <h3>Orientação Educacional</h3>
+                            <p>Orientadores educacionais são treinados para ajudar com questões pessoais e acadêmicas que afetam os estudantes.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-item">
+                        <div class="resource-icon">
+                            <i class="fas fa-hands-helping" aria-hidden="true"></i>
+                        </div>
+                        <div class="resource-content">
+                            <h3>Grupos de Apoio</h3>
+                            <p>Participe de grupos de apoio ou atividades extracurriculares que promovam bem-estar e conexões sociais positivas.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Public Health Resources -->
+            <section class="public-health" aria-labelledby="public-title">
+                <h2 id="public-title" class="section-title">Recursos do SUS</h2>
+                
+                <div class="health-grid">
+                    <div class="health-card">
+                        <h3>Unidade Básica de Saúde (UBS)</h3>
+                        <p>Porta de entrada do SUS. Procure a UBS mais próxima da sua casa para:</p>
+                        <ul>
+                            <li>Consultas com clínico geral</li>
+                            <li>Encaminhamentos para especialistas</li>
+                            <li>Medicamentos básicos gratuitos</li>
+                        </ul>
+                        <a href="https://bvsms.saude.gov.br/bvs/publicacoes/localizasus_usuario.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                            Encontrar UBS
+                        </a>
+                    </div>
+                    
+                    <div class="health-card">
+                        <h3>CAPS - Centro de Atenção Psicossocial</h3>
+                        <p>Serviços especializados em saúde mental:</p>
+                        <ul>
+                            <li>Atendimento psicológico individual</li>
+                            <li>Grupos terapêuticos</li>
+                            <li>Atividades de reabilitação</li>
+                            <li>Atendimento à família</li>
+                        </ul>
+                        <div class="tip-box">
+                            <strong>Dica:</strong> CAPS i são específicos para crianças e adolescentes
+                        </div>
+                    </div>
+                    
+                    <div class="health-card">
+                        <h3>Consultório na Rua</h3>
+                        <p>Para pessoas em situação de vulnerabilidade social:</p>
+                        <ul>
+                            <li>Atendimento onde a pessoa está</li>
+                            <li>Equipe multidisciplinar</li>
+                            <li>Cuidados de saúde mental</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Immediate Actions -->
+            <section class="immediate-actions" aria-labelledby="actions-title">
+                <h2 id="actions-title" class="section-title">Ações Imediatas para Cuidar de Si</h2>
+                
+                <div class="actions-grid">
+                    <div class="action-card">
+                        <div class="action-icon">
+                            <i class="fas fa-lungs" aria-hidden="true"></i>
+                        </div>
+                        <h3>Respire Fundo</h3>
+                        <p>Pratique respiração profunda: inspire por 4 segundos, segure por 4, expire por 6.</p>
+                    </div>
+                    
+                    <div class="action-card">
+                        <div class="action-icon">
+                            <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                        </div>
+                        <h3>Ligue para Alguém</h3>
+                        <p>Entre em contato com um amigo, familiar ou profissional de confiança.</p>
+                    </div>
+                    
+                    <div class="action-card">
+                        <div class="action-icon">
+                            <i class="fas fa-home" aria-hidden="true"></i>
+                        </div>
+                        <h3>Vá para um Local Seguro</h3>
+                        <p>Se estiver em perigo, procure um lugar onde se sinta protegido e acolhido.</p>
+                    </div>
+                    
+                    <div class="action-card">
+                        <div class="action-icon">
+                            <i class="fas fa-pen" aria-hidden="true"></i>
+                        </div>
+                        <h3>Escreva seus Sentimentos</h3>
+                        <p>Coloque no papel o que está sentindo. Isso pode ajudar a organizar os pensamentos.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Apps and Online Resources -->
+            <section class="digital-resources" aria-labelledby="digital-title">
+                <h2 id="digital-title" class="section-title">Recursos Digitais</h2>
+                
+                <div class="app-grid">
+                    <div class="app-card">
+                        <h3>Apps de Meditação</h3>
+                        <ul>
+                            <li>Headspace</li>
+                            <li>Calm</li>
+                            <li>Insight Timer</li>
+                            <li>Lojong (em português)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="app-card">
+                        <h3>Sites Úteis</h3>
+                        <ul>
+                            <li><a href="https://cvv.org.br/" target="_blank" rel="noopener noreferrer">CVV.org.br</a></li>
+                            <li><a href="https://www.minhavida.com.br/" target="_blank" rel="noopener noreferrer">Minha Vida</a></li>
+                            <li><a href="https://setembroamarelo.com/" target="_blank" rel="noopener noreferrer">Setembro Amarelo</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="app-card">
+                        <h3>Linhas de Apoio Online</h3>
+                        <ul>
+                            <li>Chat do CVV</li>
+                            <li>Whatsapp da Vida (43) 9 9911-9911</li>
+                            <li>Mapa da Saúde Mental</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Help Others -->
+            <section class="help-others" aria-labelledby="help-others-title">
+                <h2 id="help-others-title" class="section-title">Como Ajudar um Amigo</h2>
+                
+                <div class="help-tips">
+                    <div class="tip-card">
+                        <h3>Escute Sem Julgamentos</h3>
+                        <p>Ofereça sua presença e atenção. Às vezes, apenas ser ouvido já faz diferença.</p>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <h3>Encoraje a Buscar Ajuda</h3>
+                        <p>Sugira procurar um profissional, mas não force. Ofereça-se para acompanhar.</p>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <h3>Mantenha Contato</h3>
+                        <p>Continue checando como a pessoa está. Pequenos gestos mostram que você se importa.</p>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <h3>Cuide de Você Também</h3>
+                        <p>Ajudar pode ser emocionalmente desgastante. Certifique-se de também cuidar do seu bem-estar.</p>
+                    </div>
+                </div>
+                
+                <div class="warning-box" role="alert">
+                    <h3><i class="fas fa-exclamation-triangle" aria-hidden="true"></i> Sinais de Alerta</h3>
+                    <p>Se um amigo menciona:</p>
+                    <ul>
+                        <li>"Não aguento mais"</li>
+                        <li>"Seria melhor se eu não estivesse aqui"</li>
+                        <li>"Ninguém se importa comigo"</li>
+                        <li>Fala sobre métodos de autolesão</li>
+                    </ul>
+                    <p><strong>Ação:</strong> Não deixe a pessoa sozinha. Procure ajuda imediata ligando para o CVV (188) ou um adulto responsável.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sesiverso</h3>
+                    <p>Projeto de feira de ciências focado na saúde mental dos jovens na era digital.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Úteis</h4>
+                    <ul>
+                        <li><a href="como-ajudar.html">Como Procurar Ajuda</a></li>
+                        <li><a href="https://cvv.org.br/" target="_blank" rel="noopener noreferrer">CVV - Centro de Valorização da Vida</a></li>
+                        <li><a href="contato.html">Entre em Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Emergência</h4>
+                    <p><strong>CVV - 188</strong><br>
+                    Atendimento gratuito 24h</p>
+                    <a href="tel:188" class="btn btn-small">Ligar Agora</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sesiverso. Este projeto é educacional e sem fins lucrativos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

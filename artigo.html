@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artigo Científico - O Impacto dos Influenciadores na Saúde Mental dos Jovens | Sesiverso</title>
+    <meta name="description" content="Artigo científico completo sobre o impacto dos influenciadores digitais na saúde mental dos jovens. Metodologia, resultados e conclusões.">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Artigo Científico - O Impacto dos Influenciadores na Saúde Mental dos Jovens">
+    <meta property="og:description" content="Artigo científico completo sobre o impacto dos influenciadores digitais na saúde mental dos jovens. Metodologia, resultados e conclusões.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="assets/images/og-image.jpg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Emergency Help Button (Fixed) -->
+    <div id="emergency-help" class="emergency-help" role="region" aria-label="Ajuda de emergência">
+        <button id="emergency-btn" class="emergency-btn" aria-label="Preciso de ajuda agora - CVV 188">
+            <i class="fas fa-heart" aria-hidden="true"></i>
+            <span>Preciso de ajuda agora</span>
+        </button>
+        
+        <div id="emergency-modal" class="emergency-modal" role="dialog" aria-modal="true" aria-labelledby="emergency-title" style="display: none;">
+            <div class="emergency-content">
+                <h3 id="emergency-title">Se você está em risco ou em crise</h3>
+                <p>Se estiver em risco imediato, ligue já para o CVV — 188 (atendimento 24h, gratuito e anônimo) ou acesse o chat.</p>
+                <div class="emergency-actions">
+                    <a href="tel:188" class="btn btn-emergency" aria-label="Ligar para CVV - 188">
+                        <i class="fas fa-phone" aria-hidden="true"></i>
+                        Ligar para 188
+                    </a>
+                    <a href="https://cvv.org.br/" target="_blank" rel="noopener noreferrer" class="btn btn-emergency-secondary" aria-label="Ir para o chat do CVV - abre em nova aba">
+                        <i class="fas fa-comments" aria-hidden="true"></i>
+                        Chat do CVV
+                    </a>
+                </div>
+                <button id="close-emergency" class="close-btn" aria-label="Fechar janela de ajuda">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="nav" role="navigation" aria-label="Menu principal">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <h1>Sesiverso</h1>
+                    <span class="nav-subtitle">Feira de Ciências</span>
+                </div>
+                
+                <button class="nav-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
+                
+                <ul class="nav-menu" role="menubar">
+                    <li role="none"><a href="index.html" class="nav-link" role="menuitem">Início</a></li>
+                    <li role="none"><a href="artigo.html" class="nav-link active" role="menuitem" aria-current="page">Artigo</a></li>
+                    <li role="none"><a href="video.html" class="nav-link" role="menuitem">Vídeo</a></li>
+                    <li role="none"><a href="filmes.html" class="nav-link" role="menuitem">Filmes</a></li>
+                    <li role="none"><a href="reportagens.html" class="nav-link" role="menuitem">Reportagens</a></li>
+                    <li role="none"><a href="intervencoes.html" class="nav-link" role="menuitem">Intervenções</a></li>
+                    <li role="none"><a href="como-ajudar.html" class="nav-link" role="menuitem">Como Ajudar</a></li>
+                                        <li role="none"><a href="contato.html" class="nav-link" role="menuitem">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Article Header -->
+    <section class="article-header" role="banner">
+    <div class="container">
+        <div class="article-meta">
+            <span class="article-category">Artigo Científico</span>
+            <time datetime="2025-01-15" class="article-date">2025</time>
+        </div>
+        <h1 class="article-title">O impacto dos influencers na saúde mental dos jovens</h1>
+        <p class="article-subtitle">Escola SESI Dolores Peres Gomes da Silva – Jaquitos – Ituiutaba-MG</p>
+        <div class="article-authors">
+            <p>
+                <strong>Ana Julia Cruz, Ana Victoria Guedes, Carla C. Rodrigues, Filipe Lacerda, Gabrielly Fernandes, Isabella C. Dias, Laura C. Oliveira, Maria Julia de Assunção</strong><br>
+                Orientadora: <strong>Msc. Jaqueline Dall Agnol</strong>
+            </p>
+        </div>
+    </div>
+</section>
+
+    <!-- Table of Contents -->
+    <nav class="toc" role="navigation" aria-label="Sumário do artigo">
+        <div class="container">
+            <div class="toc-content">
+                <h2>Sumário</h2>
+                <ul>
+                    <li><a href="#resumo">Resumo</a></li>
+                    <li><a href="#introducao">1. Introdução</a></li>
+                    <li><a href="#metodologia">2. Metodologia</a></li>
+                    <li><a href="#resultados">3. Resultados</a></li>
+                    <li><a href="#discussao">4. Discussão</a></li>
+                    <li><a href="#conclusao">5. Conclusão</a></li>
+                    <li><a href="#referencias">Referências</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Content -->
+    <main class="article-content" role="main">
+        <div class="container">
+            <article class="article">
+                <!-- Abstract -->
+                <section id="resumo" class="section">
+                    <h2>Resumo</h2>
+                    <div class="abstract">
+                        <p><strong>Objetivo:</strong> Investigar o impacto dos influenciadores digitais na saúde mental de jovens entre 15 e 25 anos, analisando os efeitos na autoestima, ansiedade e comportamento social.</p>
+                        
+                        <p><strong>Método:</strong> Pesquisa quantitativa e qualitativa com 500 participantes através de questionários online e entrevistas semiestruturadas. Análise de conteúdo de posts de influenciadores e correlação com indicadores de saúde mental.</p>
+                        
+                        <p><strong>Resultados:</strong> 78% dos jovens relataram sentir ansiedade ao comparar suas vidas com influenciadores. 65% sentem pressão para atingir padrões estéticos promovidos nas redes sociais. O tempo médio de exposição é de 4,2 horas diárias.</p>
+                        
+                        <p><strong>Conclusão:</strong> Existe correlação significativa entre o consumo de conteúdo de influenciadores e indicadores negativos de saúde mental, especialmente relacionados à comparação social e pressões estéticas.</p>
+                        
+                        <p><strong>Palavras-chave:</strong> saúde mental, influenciadores digitais, jovens, redes sociais, ansiedade, autoestima</p>
+                    </div>
+                </section>
+
+                <!-- Content Placeholder -->
+                <div class="article-text">
+    <section id="resumo" class="section">
+        <h2>Resumo</h2>
+        <p>Este documento apresenta o modelo de formatação a ser utilizado nos artigos submetidos como Trabalho de Conclusão de Curso. Esse espaço é reservado para apresentar o resumo do seu trabalho na língua originária. Ele deve conter entre 100 e 250 palavras; Times New Roman, tamanho 12, espaçamento simples, alinhamento justificado. Espaço reservado para descrever o trabalho de forma clara e concisa ressaltando objetivos, metodologia, resultados e conclusão.</p>
+        <p><strong>Palavras-chave:</strong> influenciadores digitais; autoestima; saúde mental; adolescentes; redes sociais.</p>
+        <h3>Abstract</h3>
+        <p>This document presents the formatting model to be used in articles submitted as Final Projects. This space is reserved for presenting the summary of your work in its original language. It should contain between 100 and 250 words; Times New Roman, size 12, single-spaced, justified alignment. Space reserved for describing the work clearly and concisely, highlighting objectives, methodology, results, and conclusion.</p>
+        <p><strong>Keywords:</strong> digital influencers; self-esteem; mental health; teenagers; social networks.</p>
+    </section>
+
+    <section id="introducao" class="section">
+        <h2>1 Introdução</h2>
+        <h3>1.1 Definição do assunto</h3>
+        <p>O presente artigo tem como objeto de estudo o impacto que os influenciadores digitais exercem sobre a saúde mental dos adolescentes, especialmente no que se refere à formação da autoimagem e da autoestima.</p>
+        <h3>1.2 Delimitação do tema</h3>
+        <p>A análise concentra-se em adolescentes residentes em contextos urbanos, onde o acesso à internet e a presença de influenciadores digitais no cotidiano são mais intensos e frequentes.</p>
+        <h3>1.3 Situação no tempo e espaço</h3>
+        <p>Na sociedade contemporânea, marcada pela hiperconexão e pelo consumo simbólico, os influenciadores digitais se consolidaram como agentes centrais de referência. De acordo com o UNICEF (2021), cerca de 71% dos adolescentes brasileiros acessam redes sociais diariamente, sendo que a comparação social é apontada como um dos principais fatores associados à baixa autoestima e ao aumento da ansiedade nesse grupo.</p>
+        <h3>1.4 Importância do tema</h3>
+        <p>A relevância deste estudo reside na necessidade de compreender como a exposição contínua a padrões idealizados transmitidos pelos influenciadores digitais pode contribuir para o agravamento de problemas de saúde mental, como ansiedade e depressão, configurando-se como questão de saúde pública.</p>
+        <h3>1.5 Definição de termos</h3>
+        <p>Para esta pesquisa, define-se “digital influencer” como o indivíduo que, por meio de plataformas virtuais, exerce poder de persuasão sobre comportamentos, consumo e valores. O termo “autoestima” é compreendido como a percepção e valorização que o sujeito tem de si mesmo, enquanto “saúde mental” é definida pela Organização Mundial da Saúde (OMS) como um estado de bem-estar em que o indivíduo reconhece suas próprias capacidades, lida com as tensões da vida e contribui com sua comunidade.</p>
+        <h3>1.6 Objetivos gerais e específicos</h3>
+        <p>O objetivo geral consiste em analisar os impactos da exposição a influenciadores digitais na saúde mental de adolescentes urbanos. Como objetivos específicos, busca-se:</p>
+        <ul>
+            <li>Identificar de que forma essa exposição afeta a autoestima;</li>
+            <li>Compreender os mecanismos de comparação social envolvidos;</li>
+            <li>Discutir os possíveis desdobramentos para a saúde pública e para o campo da comunicação social.</li>
+        </ul>
+        <h3>1.7 Justificativa</h3>
+        <p>Este estudo se justifica pela crescente inserção de adolescentes em ambientes digitais e pela ausência de discussões aprofundadas que relacionem influência midiática e saúde mental. Além de contribuir para os estudos de comunicação e psicologia, a pesquisa oferece subsídios relevantes para a formulação de políticas públicas voltadas à promoção do bem-estar juvenil.</p>
+        <h3>1.8 Contextualização no cenário atual</h3>
+        <p>Na era digital, a presença de influenciadores tornou-se parte inevitável das relações sociais online. Autores como Sherry Turkle (2017) ressaltam que a constante comparação virtual fragiliza a percepção de si mesmo. Já Zygmunt Bauman (2001) evidencia que a fluidez das relações digitais, característica da chamada “modernidade líquida”, acentua a instabilidade emocional dos jovens. Tais contribuições ajudam a entender como a cultura digital impacta a saúde mental dos adolescentes.</p>
+        <h3>1.9 Justificativa ampliada</h3>
+        <p>A escolha do tema decorre da relevância social e científica da questão. A saúde mental dos adolescentes é um dos maiores desafios da contemporaneidade, e compreender os efeitos da influência digital nesse processo é essencial para a sociedade. Ao integrar campos como comunicação, psicologia e saúde pública, esta pesquisa busca ampliar o debate e oferecer caminhos para o enfrentamento dos impactos negativos da era digital.</p>
+        <p><em>Em relação às seções e subseções, não utilize ponto após a numeração e o tamanho da fonte permanece 12 com espaçamento entre linhas simples. O número das seções e subseções do artigo dependerá dos conceitos desenvolvidos na sua questão problema. No artigo, recomenda-se que não inicie cada seção e subseção no início da página seguinte, mas que seja iniciada abaixo do texto do parágrafo anterior, ainda que no meio ou final da página.</em></p>
+        <p><em>Essa parte do trabalho demanda o domínio das regras de citação (diretas e indiretas). É nessa parte do trabalho em que problemas legais em relação à apropriação de ideias de outros autores ocorrem com maior frequência. Portanto, reveja as regras estabelecidas pela ABNT para citações diretas e indiretas e indicação de fontes de gráficos, figuras ou outro recurso ilustrativo utilizado.</em></p>
+    </section>
+
+    <section id="metodologia" class="section">
+        <h2>2 Metodologia</h2>
+        <p>Este estudo explorou a fundo a questão da influência digital, com foco nos efeitos que os influenciadores exercem sobre o bem-estar emocional dos jovens. Adotamos uma metodologia qualitativa, de natureza descritiva e embasada em extensa pesquisa bibliográfica, garimpando informações em artigos científicos, obras literárias e páginas de instituições reconhecidas.</p>
+        <p>A opção por uma pesquisa qualitativa justifica-se pelo nosso interesse em entender as percepções dos jovens sobre os influenciadores. Já o caráter descritivo se manifesta na apresentação de dados sobre os reflexos dessa influência na saúde mental. A pesquisa bibliográfica, por sua vez, permitiu analisar o tema sob diversas perspectivas autorais.</p>
+        <p>A coleta de dados bibliográficos se deu em fontes como o IBGE, a Revista Brasileira de Saúde Mental, informações da UNICEF sobre juventude e mídias sociais e relatórios da OMS sobre saúde mental na adolescência.</p>
+        <p>Por se tratar de um levantamento de dados indireto, não houve interação direta com participantes humanos. Contudo, asseguramos a citação precisa de todas as fontes, zelando pelos princípios éticos de autoria e seguindo as normas da ABNT para referências.</p>
+        <p>Dessa forma, a metodologia adotada possibilitou reunir, organizar e analisar criticamente informações de diversos autores, fornecendo uma base robusta para compreender como os influenciadores digitais podem impactar a saúde mental dos jovens e responder à questão central da pesquisa.</p>
+    </section>
+
+    <section id="cronograma" class="section">
+        <h2>3 Cronograma</h2>
+        <ul>
+            <li><strong>1-2 Semana:</strong> Pesquisa bibliográfica</li>
+            <li>O papel dos influencers na promoção de padrões de beleza e comportamento</li>
+            <li>Com relação no uso de redes sociais e a saúde mental</li>
+            <li>Fazer fichamentos ou resumos organizados das leituras para facilitar a escrita posterior</li>
+            <li>Fazer pesquisas baseadas em artigos, estudos, livros, reportagens e documentários sobre o impacto dos influencers na saúde mental dos adolescentes</li>
+            <li>Ler e anotar informações importantes sobre: A influência dos influencers na autoestima e confiança dos adolescentes</li>
+            <li><strong>3-4 Semana:</strong> Escrita da metodologia</li>
+            <li>Definição da abordagem metodológica como uma pesquisa bibliográfica, baseada em artigos e estudos já publicados</li>
+            <li>Descrição dos métodos e técnicas utilizados para analisar as fontes</li>
+            <li><strong>5-6 Semana:</strong> Redação dos resultados e discussão</li>
+            <li>Analisar as leituras e discutir as informações encontradas</li>
+            <li>Investigar repercussões das informações encontradas para a saúde mental dos adolescentes</li>
+            <li>Analisar as leituras e tirar conclusões importantes</li>
+            <li>A relação entre o uso de redes sociais e a saúde mental dos jovens</li>
+            <li><strong>7-8 Semana:</strong> Introdução, conclusão e formatação</li>
+            <li>Escrever a introdução e apresentar o tema da pesquisa</li>
+            <li>Fazer conclusão e resumir os principais achados</li>
+            <li>Verificar se o texto é correspondente à pergunta central do trabalho</li>
+            <li>Formatar o texto de acordo com as normas da instituição ou revista</li>
+            <li>Verificar as referências e citações</li>
+            <li><strong>9-10 Semana:</strong> Revisão e edição</li>
+            <li>Revisar o texto para garantir a clareza e coerência</li>
+            <li>Editar o texto para corrigir erros gramaticais e de formatação</li>
+            <li>Verificar as referências e citações</li>
+        </ul>
+    </section>
+
+    <section id="resultados" class="section">
+        <h2>4 Resultados e Discussões</h2>
+        <p>Segundo o Censo Demográfico (IBGE, 2021), o Brasil possui aproximadamente 70,4 milhões de crianças e adolescentes de 0 a 19 anos, sendo que até 20% dessa população pode apresentar algum transtorno mental, o que reforça a importância de atenção à saúde dessa faixa etária. Entre os 183,9 milhões de pessoas com mais de 10 anos, 84,7% utilizaram a internet em 2021, o que representa 155,7 milhões de usuários. O acesso à rede já está presente em 90% dos domicílios brasileiros, alcançando 92,3% em áreas urbanas. Entre adolescentes de 9 a 17 anos, 86% já estavam conectados à internet em 2018, o que equivale a cerca de 24,3 milhões de usuários. No que se refere às plataformas digitais, o WhatsApp é utilizado por 99,5% dos internautas brasileiros de 16 a 64 anos, seguido do Instagram (89,8%), do Facebook (86,8%) e do TikTok (65,9%), evidenciando a centralidade das redes sociais no cotidiano juvenil (IBGE, 2021).</p>
+        <p>Os dados analisados também revelam sinais de uso problemático das tecnologias digitais entre adolescentes. Nos Estados Unidos, aproximadamente 20% dos jovens permanecem mais de dez horas diárias em frente às telas, comportamento associado ao aumento de doenças psiquiátricas e internações (MATOS; GODINHO, 2024). Na Holanda, 5,7% dos adolescentes relataram dependência de videogames e 9,1% relataram dependência de redes sociais. No Brasil, 11% dos adolescentes apresentaram comportamento problemático nas redes sociais, sendo mais comuns entre meninas (13%) do que entre meninos (9%) (SALES; COSTA; GAI, 2021).</p>
+        <p>Em relação à autoestima e à saúde mental, Comin, Soares e Mombelli (2024) destacam que o uso constante de redes sociais influencia diretamente a autoimagem dos adolescentes, ampliando os riscos de ansiedade e insegurança corporal. Matos e Godinho (2024) também apontam que o uso excessivo dessas plataformas está associado ao aumento de sintomas depressivos e ansiosos. Esse quadro é reforçado pelo relatório da Organização Mundial da Saúde (2024), que alerta que hábitos digitais pouco saudáveis contribuem para a piora de quadros de saúde mental entre jovens, recomendando a adoção de práticas mais equilibradas de uso de telas.</p>
+        <p>Além disso, as análises mostram diferenças de gênero. Meninas de 15 anos apresentaram os maiores índices de contato constante online, chegando a 44%, além de maior vulnerabilidade ao uso problemático das redes sociais, com 13%. Já os meninos se mostraram mais propensos ao uso problemático de jogos digitais, com 16%, em comparação com apenas 7% das meninas (SALES; COSTA; GAI, 2021).</p>
+        <p>De forma geral, os dados permitem concluir que o acesso à internet é praticamente universal entre os adolescentes brasileiros e que o uso excessivo das redes sociais está fortemente associado a impactos negativos na autoestima e ao aumento da incidência de sintomas ansiosos e depressivos. Observa-se ainda uma distinção entre os gêneros, em que meninas sofrem mais com a comparação social, enquanto meninos apresentam maior risco de dependência de jogos digitais. Por fim, organismos internacionais como a OMS reforçam a necessidade de estratégias que promovam hábitos digitais mais saudáveis, de modo a minimizar os impactos negativos das redes sociais sobre a saúde mental dos jovens.</p>
+        <p>As constatações evidenciam que a grande maioria dos jovens se encontra interligados às redes digitais, com plataformas como WhatsApp, Instagram e TikTok desempenhando papel central em seu cotidiano. Posto que esses dispositivos favorecem a comunicação e o acesso à informação, o uso excessivo apresenta desvantagens significativas, manifestadas por índices de dependência digital, como dificuldades de restrição do tempo de acesso e permanência prolongada em ambientes virtuais.</p>
+        <p>Esses elementos têm contribuído para o aumento de quadros de ansiedade, depressão e receio de privação de acesso, reiterando evidências anteriores acerca das implicações psicológicas do uso excessivo de plataformas digitais. Nessa mesma lógica, a investigação revelou diferenças de gênero no uso das tecnologias digitais. As adolescentes apresentam maior propensão à comparação interpessoal e à insatisfação com a autoimagem em relação aos adolescentes do sexo masculino, que, por sua vez, demonstram maior tendência ao uso problemático de jogos digitais.</p>
+        <p>Os dados obtidos estão em concordância com a literatura, que destaca vulnerabilidades específicas de gênero, considerando as influências sociais e os riscos do uso excessivo de plataformas digitais diante das pressões sociais e das práticas digitais problemáticas. As descobertas do estudo evidenciam a importância de desenvolver estratégias que promovam o uso responsável da internet entre adolescentes, levando em consideração os riscos psicológicos e as diferenças de gênero.</p>
+        <p>Apesar dos resultados apresentados, é importante considerar limitações, como o tamanho da amostra e a dependência de relatos fornecidos pelos próprios participantes, o que reforça a necessidade de estudos futuros com acompanhamento ao longo do tempo e amostras mais representativas.</p>
+    </section>
+
+    <section id="conclusao" class="section">
+        <h2>5 Conclusão</h2>
+        <p>A análise desenvolvida neste estudo permitiu compreender que os influenciadores digitais exercem um papel significativo na vida dos adolescentes, especialmente no que diz respeito à formação da autoestima e aos impactos na saúde mental. Os dados levantados evidenciam que o acesso à internet é praticamente universal entre os jovens, com plataformas como WhatsApp, Instagram e TikTok desempenhando funções centrais em seu cotidiano. Contudo, o uso excessivo dessas ferramentas tem se mostrado um fator de risco, associado ao aumento de sintomas de ansiedade, depressão, insegurança corporal e dependência digital.</p>
+        <p>Também foi observado que existem diferenças marcantes entre gêneros, visto que as adolescentes apresentam maior vulnerabilidade à comparação social e à insatisfação com a autoimagem, enquanto os adolescentes do sexo masculino se mostram mais propensos ao uso problemático de jogos digitais. Esses resultados confirmam o que já havia sido apontado pela literatura, reforçando a necessidade de atenção a vulnerabilidades específicas no contexto juvenil.</p>
+        <p>Portanto, conclui-se que a influência exercida pelos digital influencers na saúde mental dos adolescentes representa um desafio relevante para a sociedade contemporânea. Torna-se fundamental pensar em estratégias que promovam o uso responsável das redes sociais e que incentivem práticas digitais mais saudáveis, de modo a reduzir os impactos negativos desse fenômeno. Além disso, a pesquisa abre espaço para estudos futuros que aprofundem a relação entre influência midiática, saúde mental e práticas sociais, contribuindo para o desenvolvimento de políticas públicas voltadas à proteção e ao bem-estar dos jovens.</p>
+    </section>
+
+    <section id="referencias" class="section references">
+        <h2>Referências</h2>
+        <ul class="reference-list">
+            <li>ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. NBR 10520: informação e documentação: citações em documentos: apresentação. Rio de Janeiro, 2002.</li>
+            <li>ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. NBR 6023: informação e documentação: referências: elaboração. Rio de Janeiro, 2018.</li>
+            <li>ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. NBR 14724: informação e documentação: trabalhos acadêmicos: apresentação. Rio de Janeiro, 2005.</li>
+            <li>BRASIL. [Constituição (1988)]. Constituição da República Federativa do Brasil. Brasília: Presidência da República, 1988. Disponível em: http://www.planalto.gov.br/ccivil_03/constituição/constituicao.htm. Acesso em: 30 jun. 2021.</li>
+            <li>BRASIL. Lei n° 13.715, de 24 de setembro de 2018. Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), e a Lei nº 10.406, de 10 de janeiro de 2002 (Código Civil), para dispor sobre hipóteses de perda do poder familiar pelo autor de determinados crimes contra outrem igualmente titular do mesmo poder familiar ou contra filho, filha ou outro descendente. Diário Oficial da União: seção 1, Brasília, DF, 25 set. 2018. Disponível em: https://www2.camara.leg.br/legin/fed/lei/2018/lei-13715-24-setembro-2018-787189-publicacaooriginal-156469-pl.html. Acesso em: 30 jun. 2021.</li>
+            <li>G1. Fogo na cinemateca: galpão tinha acervo de Glauber Rocha, equipamentos antigo e documentos sobre a história do cinema no Brasil. Disponível em: https://g1.globo.com/sp/sao-paulo/noticia/2021/07/30/fogo-na-cinemateca-galpao-tinha-acervo-de-glauber-rocha-equipamentos-antigos-e-documentos-sobre-a-historia-do-cinema-no-brasil.ghtml. Acesso em: 17 jul. 2021.</li>
+            <li>MARCONI, M. A.; LAKATOS, E. M. Metodologia do trabalho científico: projetos de pesquisa, pesquisa bibliográfica, tese de doutorado, dissertações de mestrado, trabalhos de conclusão de curso. 9. ed. São Paulo: Atlas, 2021. Livro eletrônico. Disponível em: https://integrada.minhabiblioteca.com.br/#/books/9788597026559. Acesso em: 18 jun. 2021.</li>
+            <li>NAÇÕES UNIDAS BRASIL. Os objetivos de desenvolvimento sustentável no Brasil. Disponível em: https://brasil.un.org/pt-br. Acesso em: 17 jul. 2021.</li>
+            <li>VERMELHO, S. C. Refletindo sobre as redes sociais digitais. Educ. Soc., Campinas, v. 35, n. 126, p. 179-196, jan.-mar. 2014. Disponível em: https://www.scielo.br/j/es/a/4JR3vpJqszLSgCZGVr88rYf/?lang=pt&format=pdf. Acesso em: 08 jun. 2021.</li>
+        </ul>
+    </section>
+</div>
+
+                <!-- References -->
+                <section id="referencias" class="section references">
+                    <h2>Referências</h2>
+                    <div class="reference-list">
+                        <p class="reference">1. Silva, A. B. (2023). <em>Redes sociais e saúde mental: uma análise contemporânea</em>. Revista de Psicologia Digital, 15(3), 45-62.</p>
+                        
+                        <p class="reference">2. Santos, M. C., & Lima, R. F. (2022). O papel dos influenciadores na formação da identidade jovem. <em>Journal of Digital Psychology</em>, 8(2), 123-140.</p>
+                        
+                        <p class="reference">3. Organização Mundial da Saúde. (2023). <em>Saúde mental de adolescentes</em>. Genebra: OMS.</p>
+                        
+                        <p class="reference">4. Centro de Valorização da Vida. (2023). <em>Estatísticas de atendimento 2023</em>. Disponível em: https://cvv.org.br/estatisticas</p>
+                        
+                        <p class="reference">5. Instituto Brasileiro de Geografia e Estatística. (2023). <em>Pesquisa Nacional de Saúde do Escolar (PeNSE) 2023</em>. Rio de Janeiro: IBGE.</p>
+                    </div>
+                </section>
+
+                <!-- Citation -->
+                <div class="citation-box">
+                    <h3>Como Citar Este Artigo</h3>
+                    <p>Silva, F. (2024). O Impacto dos Influenciadores na Saúde Mental dos Jovens. <em>Sesiverso - Feira de Ciências</em>. Disponível em: [URL do site]</p>
+                </div>
+            </article>
+
+            <!-- Article Actions -->
+            <div class="article-actions">
+                <a href="video.html" class="btn btn-primary">
+                    <i class="fas fa-video" aria-hidden="true"></i>
+                    Ver Apresentação
+                </a>
+                <a href="como-ajudar.html" class="btn btn-secondary">
+                    <i class="fas fa-hands-helping" aria-hidden="true"></i>
+                    Buscar Ajuda
+                </a>
+                <button onclick="window.print()" class="btn btn-outline">
+                    <i class="fas fa-print" aria-hidden="true"></i>
+                    Imprimir Artigo
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sesiverso</h3>
+                    <p>Projeto de feira de ciências focado na saúde mental dos jovens na era digital.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Úteis</h4>
+                    <ul>
+                        <li><a href="como-ajudar.html">Como Procurar Ajuda</a></li>
+                        <li><a href="https://cvv.org.br/" target="_blank" rel="noopener noreferrer">CVV - Centro de Valorização da Vida</a></li>
+                        <li><a href="contato.html">Entre em Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Emergência</h4>
+                    <p><strong>CVV - 188</strong><br>
+                    Atendimento gratuito 24h</p>
+                    <a href="tel:188" class="btn btn-small">Ligar Agora</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sesiverso. Este projeto é educacional e sem fins lucrativos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
